@@ -225,6 +225,7 @@ Partial Class NuevoEmpleado
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "NuevoEmpleado"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "NuevoEmpleado"
         CType(Me.dgvEmpleado, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)

@@ -28,12 +28,12 @@
             Dim selectedRowIndex As Integer = dgvEmpleado.SelectedCells(0).RowIndex
             Dim employeeId As String = dgvEmpleado.Rows(selectedRowIndex).Cells("IdEmpleado").Value.ToString()
 
-            ' Delete the selected employee using the ID
+            ' Borra al empleado seleccionado usando the ID
             DeleteFromTable("Empleado", "IdEmpleado", employeeId)
-            ' Replace "YourTableName" with the actual table name in your database
         Else
             MessageBox.Show("Please select a row to delete.")
         End If
+        MsgBox("Registro Eliminado correctamente")
         LoadData(dgvEmpleado, "Empleado")
     End Sub
 
@@ -41,9 +41,8 @@
         If e.RowIndex >= 0 Then
             Dim employeeId As String = dgvEmpleado.Rows(e.RowIndex).Cells("IdEmpleado").Value.ToString()
 
-            ' Delete the employee by calling the DeleteFromTable function
+            ' Elimina al Empleado Usando la Funcion DelteFrom Table
             DeleteFromTable("Empleado", "IdEmpleado", employeeId)
-            ' Replace "YourTableName" with the actual table name in your database
         End If
     End Sub
 
