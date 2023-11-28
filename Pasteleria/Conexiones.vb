@@ -86,4 +86,35 @@ Module Conexion
 
 
 
+
+
+
+    'Public Sub ModificarDatos(table As String, newValue1 As String, newValue2 As String, newValue3 As String, employeeId As String)
+
+
+
+    'query As String = $"UPDATE {table} SET Column1 = @newValue1, Column2 = @newValue2, Column3 = @newValue3 WHERE EmployeeIDColumn = @employeeId"
+
+
+    'Using cmd As New SqlCommand(query, connect)
+    'cmd.Parameters.AddWithValue("@newValue1", newValue1)
+    'cmd.Parameters.AddWithValue("@newValue2", newValue2)
+    'cmd.Parameters.AddWithValue("@newValue3", newValue3)
+    ' cmd.Parameters.AddWithValue("@employeeId", employeeId)
+
+    'Try
+    ' connect.Open()
+    'cmd.ExecuteNonQuery()
+    'Catch ex As Exception
+    'MessageBox.Show("Error updating data: " & ex.Message)
+    ' Finally
+    ' connect.Close()
+    'End Try
+    'End Using
+    '  End Sub
+
+
+
+
+
 End Module

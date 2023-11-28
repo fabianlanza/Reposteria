@@ -38,6 +38,7 @@ Partial Class NuevoEmpleado
         Me.btnRegresar = New System.Windows.Forms.Button()
         Me.dgvEmpleado = New System.Windows.Forms.DataGridView()
         Me.BtnEliminar = New System.Windows.Forms.Button()
+        Me.BtnModificar = New System.Windows.Forms.Button()
         CType(Me.dgvEmpleado, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -202,11 +203,23 @@ Partial Class NuevoEmpleado
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
         '
+        'BtnModificar
+        '
+        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.BtnModificar.Location = New System.Drawing.Point(27, 434)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2)
+        Me.BtnModificar.Name = "BtnModificar"
+        Me.BtnModificar.Size = New System.Drawing.Size(75, 38)
+        Me.BtnModificar.TabIndex = 28
+        Me.BtnModificar.Text = "Modificar"
+        Me.BtnModificar.UseVisualStyleBackColor = True
+        '
         'NuevoEmpleado
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(625, 503)
+        Me.Controls.Add(Me.BtnModificar)
         Me.Controls.Add(Me.BtnEliminar)
         Me.Controls.Add(Me.dgvEmpleado)
         Me.Controls.Add(Me.btnRegresar)
@@ -249,4 +262,5 @@ Partial Class NuevoEmpleado
     Friend WithEvents btnRegresar As Button
     Friend WithEvents dgvEmpleado As DataGridView
     Friend WithEvents BtnEliminar As Button
+    Friend WithEvents BtnModificar As Button
 End Class
