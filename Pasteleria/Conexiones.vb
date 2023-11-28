@@ -77,7 +77,9 @@ Module Conexion
                 cmd.ExecuteNonQuery()
 
             Catch ex As Exception
-
+                MessageBox.Show("Error inserting data: " & ex.Message)
+            Finally
+                CloseConnection()
             End Try
         End Using
 

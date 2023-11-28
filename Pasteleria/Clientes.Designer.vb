@@ -32,54 +32,56 @@ Partial Class Clientes
         'dgvClientes
         '
         Me.dgvClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvClientes.Location = New System.Drawing.Point(9, 89)
-        Me.dgvClientes.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.dgvClientes.Location = New System.Drawing.Point(64, 232)
+        Me.dgvClientes.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.dgvClientes.Name = "dgvClientes"
         Me.dgvClientes.RowHeadersWidth = 51
         Me.dgvClientes.RowTemplate.Height = 24
-        Me.dgvClientes.Size = New System.Drawing.Size(438, 266)
+        Me.dgvClientes.Size = New System.Drawing.Size(708, 272)
         Me.dgvClientes.TabIndex = 0
         '
         'btnAgregarCliente
         '
-        Me.btnAgregarCliente.Location = New System.Drawing.Point(468, 89)
-        Me.btnAgregarCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnAgregarCliente.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnAgregarCliente.Location = New System.Drawing.Point(632, 538)
+        Me.btnAgregarCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAgregarCliente.Name = "btnAgregarCliente"
-        Me.btnAgregarCliente.Size = New System.Drawing.Size(94, 23)
+        Me.btnAgregarCliente.Size = New System.Drawing.Size(100, 47)
         Me.btnAgregarCliente.TabIndex = 1
         Me.btnAgregarCliente.Text = "Agregar cliente"
         Me.btnAgregarCliente.UseVisualStyleBackColor = True
         '
         'btnEleminarCliente
         '
-        Me.btnEleminarCliente.Location = New System.Drawing.Point(468, 145)
-        Me.btnEleminarCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnEleminarCliente.Location = New System.Drawing.Point(490, 539)
+        Me.btnEleminarCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnEleminarCliente.Name = "btnEleminarCliente"
-        Me.btnEleminarCliente.Size = New System.Drawing.Size(94, 23)
+        Me.btnEleminarCliente.Size = New System.Drawing.Size(100, 47)
         Me.btnEleminarCliente.TabIndex = 2
         Me.btnEleminarCliente.Text = "Eliminar Cliente"
         Me.btnEleminarCliente.UseVisualStyleBackColor = True
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(468, 258)
-        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.btnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnRegresar.Location = New System.Drawing.Point(189, 538)
+        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(94, 23)
+        Me.btnRegresar.Size = New System.Drawing.Size(100, 47)
         Me.btnRegresar.TabIndex = 3
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
         'Clientes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(600, 366)
+        Me.ClientSize = New System.Drawing.Size(833, 619)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnEleminarCliente)
         Me.Controls.Add(Me.btnAgregarCliente)
         Me.Controls.Add(Me.dgvClientes)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Clientes"
         Me.Text = "Clientes"
         CType(Me.dgvClientes, System.ComponentModel.ISupportInitialize).EndInit()

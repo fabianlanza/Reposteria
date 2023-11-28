@@ -7,7 +7,7 @@
     End Sub
 
     Private Sub btnAgregarCliente_Click(sender As Object, e As EventArgs) Handles btnAgregarCliente.Click
-
+        formManager.OpenForm(NuevoUsuario, Me)
     End Sub
 
     Private Sub btnEleminarCliente_Click(sender As Object, e As EventArgs) Handles btnEleminarCliente.Click
