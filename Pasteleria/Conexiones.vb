@@ -21,14 +21,18 @@ Module Conexion
     Public Sub LoadData(dgv As DataGridView, table As String)
 
         Try
+            OpenConnection()
             Dim cmd As New SqlCommand("Select * from " & table, connect)
             Dim da As New SqlDataAdapter()
             da.SelectCommand = cmd
             Dim dt As New DataTable()
             da.Fill(dt)
             dgv.DataSource = dt
+
         Catch ex As Exception
             MessageBox.Show("Unable to load data")
+        Finally
+            CloseConnection()
         End Try
 
     End Sub

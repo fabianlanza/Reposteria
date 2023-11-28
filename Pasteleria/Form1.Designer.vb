@@ -22,21 +22,11 @@ Partial Class Inicio
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.btnCompra = New System.Windows.Forms.Button()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.btnInventario = New System.Windows.Forms.Button()
         Me.btnHistorial = New System.Windows.Forms.Button()
+        Me.btnCliente = New System.Windows.Forms.Button()
         Me.SuspendLayout()
-        '
-        'btnCompra
-        '
-        Me.btnCompra.Location = New System.Drawing.Point(60, 158)
-        Me.btnCompra.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.btnCompra.Name = "btnCompra"
-        Me.btnCompra.Size = New System.Drawing.Size(133, 30)
-        Me.btnCompra.TabIndex = 7
-        Me.btnCompra.Text = "Realizar compra"
-        Me.btnCompra.UseVisualStyleBackColor = True
         '
         'Button1
         '
@@ -68,23 +58,33 @@ Partial Class Inicio
         Me.btnHistorial.Text = "Historial"
         Me.btnHistorial.UseVisualStyleBackColor = True
         '
+        'btnCliente
+        '
+        Me.btnCliente.Location = New System.Drawing.Point(38, 158)
+        Me.btnCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCliente.Name = "btnCliente"
+        Me.btnCliente.Size = New System.Drawing.Size(157, 30)
+        Me.btnCliente.TabIndex = 11
+        Me.btnCliente.Text = "Clientes"
+        Me.btnCliente.UseVisualStyleBackColor = True
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(709, 478)
+        Me.Controls.Add(Me.btnCliente)
         Me.Controls.Add(Me.btnHistorial)
         Me.Controls.Add(Me.btnInventario)
         Me.Controls.Add(Me.Button1)
-        Me.Controls.Add(Me.btnCompra)
         Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Inicio"
         Me.Text = "Inicio"
         Me.ResumeLayout(False)
 
     End Sub
-    Friend WithEvents btnCompra As Button
     Friend WithEvents Button1 As Button
     Friend WithEvents btnInventario As Button
     Friend WithEvents btnHistorial As Button
+    Friend WithEvents btnCliente As Button
 End Class
