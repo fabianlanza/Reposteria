@@ -13,6 +13,7 @@
             MessageBox.Show("Error inserting data: " & ex.Message)
         End Try
         LoadData(dgvEmpleado, "Empleado") 'refresca El data grid para ver los nuevos empleados
+        Limpiar() 'Limpiando los contenedores
     End Sub
 
     Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
@@ -22,6 +23,9 @@
     Private Sub NuevoEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadData(dgvEmpleado, "Empleado")
     End Sub
+
+
+
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         If dgvEmpleado.SelectedCells.Count > 0 Then
@@ -46,5 +50,13 @@
         End If
     End Sub
 
+
+
+    'Para limpiar los TextBoxs
+    Private Sub Limpiar()
+        txtNombre.Text = ""
+        txtEmail.Text = ""
+        txtTelefono.Text = ""
+    End Sub
 
 End Class
