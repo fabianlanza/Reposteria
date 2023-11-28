@@ -40,123 +40,137 @@ Partial Class NuevoEmpleado
         '
         'txtPass
         '
-        Me.txtPass.Location = New System.Drawing.Point(156, 341)
+        Me.txtPass.Location = New System.Drawing.Point(117, 277)
+        Me.txtPass.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPass.Name = "txtPass"
-        Me.txtPass.Size = New System.Drawing.Size(183, 22)
+        Me.txtPass.Size = New System.Drawing.Size(138, 20)
         Me.txtPass.TabIndex = 23
         '
         'txtDireccion
         '
-        Me.txtDireccion.Location = New System.Drawing.Point(156, 275)
+        Me.txtDireccion.Location = New System.Drawing.Point(117, 223)
+        Me.txtDireccion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtDireccion.Name = "txtDireccion"
-        Me.txtDireccion.Size = New System.Drawing.Size(183, 22)
+        Me.txtDireccion.Size = New System.Drawing.Size(138, 20)
         Me.txtDireccion.TabIndex = 22
         '
         'txtTelefono
         '
-        Me.txtTelefono.Location = New System.Drawing.Point(156, 212)
+        Me.txtTelefono.Location = New System.Drawing.Point(117, 172)
+        Me.txtTelefono.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTelefono.Name = "txtTelefono"
-        Me.txtTelefono.Size = New System.Drawing.Size(183, 22)
+        Me.txtTelefono.Size = New System.Drawing.Size(138, 20)
         Me.txtTelefono.TabIndex = 21
         '
         'txtNombre
         '
-        Me.txtNombre.Location = New System.Drawing.Point(156, 155)
+        Me.txtNombre.Location = New System.Drawing.Point(117, 126)
+        Me.txtNombre.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtNombre.Name = "txtNombre"
-        Me.txtNombre.Size = New System.Drawing.Size(183, 22)
+        Me.txtNombre.Size = New System.Drawing.Size(138, 20)
         Me.txtNombre.TabIndex = 20
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(156, 106)
+        Me.txtUsuario.Location = New System.Drawing.Point(117, 86)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(183, 22)
+        Me.txtUsuario.Size = New System.Drawing.Size(138, 20)
         Me.txtUsuario.TabIndex = 19
         '
         'txtEmail
         '
-        Me.txtEmail.Location = New System.Drawing.Point(156, 57)
+        Me.txtEmail.Location = New System.Drawing.Point(117, 46)
+        Me.txtEmail.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtEmail.Name = "txtEmail"
-        Me.txtEmail.Size = New System.Drawing.Size(183, 22)
+        Me.txtEmail.Size = New System.Drawing.Size(138, 20)
         Me.txtEmail.TabIndex = 18
         '
         'Label6
         '
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(12, 112)
+        Me.Label6.Location = New System.Drawing.Point(9, 91)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(57, 16)
+        Me.Label6.Size = New System.Drawing.Size(46, 13)
         Me.Label6.TabIndex = 17
         Me.Label6.Text = "Usuario:"
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(12, 347)
+        Me.Label5.Location = New System.Drawing.Point(9, 282)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(79, 16)
+        Me.Label5.Size = New System.Drawing.Size(64, 13)
         Me.Label5.TabIndex = 16
         Me.Label5.Text = "Contraseña:"
         '
         'Label4
         '
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(12, 278)
+        Me.Label4.Location = New System.Drawing.Point(9, 226)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(67, 16)
+        Me.Label4.Size = New System.Drawing.Size(55, 13)
         Me.Label4.TabIndex = 15
         Me.Label4.Text = "Direccion:"
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(12, 218)
+        Me.Label3.Location = New System.Drawing.Point(9, 177)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(64, 16)
+        Me.Label3.Size = New System.Drawing.Size(52, 13)
         Me.Label3.TabIndex = 14
         Me.Label3.Text = "Telefono:"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(12, 161)
+        Me.Label2.Location = New System.Drawing.Point(9, 131)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(123, 16)
+        Me.Label2.Size = New System.Drawing.Size(97, 13)
         Me.Label2.TabIndex = 13
         Me.Label2.Text = "Nombre Completo: "
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(12, 64)
+        Me.Label1.Location = New System.Drawing.Point(9, 52)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(44, 16)
+        Me.Label1.Size = New System.Drawing.Size(35, 13)
         Me.Label1.TabIndex = 12
         Me.Label1.Text = "Email:"
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(156, 390)
+        Me.btnRegistrar.Location = New System.Drawing.Point(207, 317)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(89, 32)
+        Me.btnRegistrar.Size = New System.Drawing.Size(75, 38)
         Me.btnRegistrar.TabIndex = 24
-        Me.btnRegistrar.Text = "Registrarse"
+        Me.btnRegistrar.Text = "Registrar"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(12, 390)
+        Me.btnRegresar.Location = New System.Drawing.Point(69, 317)
+        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(89, 32)
+        Me.btnRegresar.Size = New System.Drawing.Size(73, 38)
         Me.btnRegresar.TabIndex = 25
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
         'NuevoEmpleado
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(492, 450)
+        Me.ClientSize = New System.Drawing.Size(369, 366)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.btnRegistrar)
         Me.Controls.Add(Me.txtPass)
@@ -171,6 +185,7 @@ Partial Class NuevoEmpleado
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "NuevoEmpleado"
         Me.Text = "NuevoEmpleado"
         Me.ResumeLayout(False)
