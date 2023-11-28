@@ -30,54 +30,54 @@ Partial Class Inicio
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(495, 158)
-        Me.Button1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Button1.Location = New System.Drawing.Point(371, 128)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(157, 30)
+        Me.Button1.Size = New System.Drawing.Size(118, 24)
         Me.Button1.TabIndex = 8
         Me.Button1.Text = "Acceso de empleado"
         Me.Button1.UseVisualStyleBackColor = True
         '
         'btnInventario
         '
-        Me.btnInventario.Location = New System.Drawing.Point(495, 252)
-        Me.btnInventario.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnInventario.Location = New System.Drawing.Point(371, 205)
+        Me.btnInventario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInventario.Name = "btnInventario"
-        Me.btnInventario.Size = New System.Drawing.Size(157, 30)
+        Me.btnInventario.Size = New System.Drawing.Size(118, 24)
         Me.btnInventario.TabIndex = 9
         Me.btnInventario.Text = "Inventario"
         Me.btnInventario.UseVisualStyleBackColor = True
         '
         'btnHistorial
         '
-        Me.btnHistorial.Location = New System.Drawing.Point(495, 351)
-        Me.btnHistorial.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnHistorial.Location = New System.Drawing.Point(371, 285)
+        Me.btnHistorial.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnHistorial.Name = "btnHistorial"
-        Me.btnHistorial.Size = New System.Drawing.Size(157, 30)
+        Me.btnHistorial.Size = New System.Drawing.Size(118, 24)
         Me.btnHistorial.TabIndex = 10
         Me.btnHistorial.Text = "Historial"
         Me.btnHistorial.UseVisualStyleBackColor = True
         '
         'btnCliente
         '
-        Me.btnCliente.Location = New System.Drawing.Point(38, 158)
-        Me.btnCliente.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnCliente.Location = New System.Drawing.Point(28, 128)
+        Me.btnCliente.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnCliente.Name = "btnCliente"
-        Me.btnCliente.Size = New System.Drawing.Size(157, 30)
+        Me.btnCliente.Size = New System.Drawing.Size(118, 24)
         Me.btnCliente.TabIndex = 11
         Me.btnCliente.Text = "Clientes"
         Me.btnCliente.UseVisualStyleBackColor = True
         '
         'Inicio
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(709, 478)
+        Me.ClientSize = New System.Drawing.Size(532, 388)
         Me.Controls.Add(Me.btnCliente)
         Me.Controls.Add(Me.btnHistorial)
         Me.Controls.Add(Me.btnInventario)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Inicio"
         Me.Text = "Inicio"
         Me.ResumeLayout(False)
