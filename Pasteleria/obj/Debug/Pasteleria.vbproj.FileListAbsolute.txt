@@ -47,3 +47,8 @@ C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\Pasteleria.exe.con
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\Pasteleria.exe
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\Pasteleria.pdb
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\Pasteleria.xml
+E:\Github\Reposteria\Pasteleria\bin\Debug\Pasteleria.exe.config
+E:\Github\Reposteria\Pasteleria\bin\Debug\Pasteleria.exe
+E:\Github\Reposteria\Pasteleria\bin\Debug\Pasteleria.pdb
+E:\Github\Reposteria\Pasteleria\bin\Debug\Pasteleria.xml
+E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Clientes.resources

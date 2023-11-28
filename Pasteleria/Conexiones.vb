@@ -1,8 +1,8 @@
 ﻿Imports System.Data.SqlClient
 
 Module Conexion
-    'server
-    Public connect As New SqlConnection("Data Source=LAPTOP-S8ASBQKS;Initial Catalog=SistemaPasteleria;Integrated Security=True")
+    'LAPTOP-S8ASBQKS
+    Public connect As New SqlConnection("Data Source=LAPTOP-S8ASBQKSL;Initial Catalog=SistemaPasteleria;Integrated Security=True")
 
     Sub OpenConnection()
         If connect.State = 0 Then

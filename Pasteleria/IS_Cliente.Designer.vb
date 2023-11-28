@@ -40,67 +40,75 @@ Partial Class IS_Cliente
         Me.Panel1.Controls.Add(Me.txtPassw)
         Me.Panel1.Controls.Add(Me.btnUsuario)
         Me.Panel1.Controls.Add(Me.Label1)
-        Me.Panel1.Location = New System.Drawing.Point(38, 41)
+        Me.Panel1.Location = New System.Drawing.Point(28, 33)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(298, 387)
+        Me.Panel1.Size = New System.Drawing.Size(224, 314)
         Me.Panel1.TabIndex = 7
         '
         'txtUsuario
         '
-        Me.txtUsuario.Location = New System.Drawing.Point(13, 43)
+        Me.txtUsuario.Location = New System.Drawing.Point(10, 35)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(149, 22)
+        Me.txtUsuario.Size = New System.Drawing.Size(113, 20)
         Me.txtUsuario.TabIndex = 3
         '
         'btnRegistrar
         '
-        Me.btnRegistrar.Location = New System.Drawing.Point(95, 283)
+        Me.btnRegistrar.Location = New System.Drawing.Point(71, 230)
+        Me.btnRegistrar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRegistrar.Name = "btnRegistrar"
-        Me.btnRegistrar.Size = New System.Drawing.Size(120, 29)
+        Me.btnRegistrar.Size = New System.Drawing.Size(90, 24)
         Me.btnRegistrar.TabIndex = 5
         Me.btnRegistrar.Text = "Registrase"
         Me.btnRegistrar.UseVisualStyleBackColor = True
         '
         'btnInicioSesion
         '
-        Me.btnInicioSesion.Location = New System.Drawing.Point(95, 232)
+        Me.btnInicioSesion.Location = New System.Drawing.Point(71, 188)
+        Me.btnInicioSesion.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnInicioSesion.Name = "btnInicioSesion"
-        Me.btnInicioSesion.Size = New System.Drawing.Size(120, 29)
+        Me.btnInicioSesion.Size = New System.Drawing.Size(90, 24)
         Me.btnInicioSesion.TabIndex = 0
         Me.btnInicioSesion.Text = "Iniciar Sesion"
         Me.btnInicioSesion.UseVisualStyleBackColor = True
         '
         'txtPassw
         '
-        Me.txtPassw.Location = New System.Drawing.Point(13, 108)
+        Me.txtPassw.Location = New System.Drawing.Point(10, 88)
+        Me.txtPassw.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtPassw.Name = "txtPassw"
-        Me.txtPassw.Size = New System.Drawing.Size(149, 22)
+        Me.txtPassw.Size = New System.Drawing.Size(113, 20)
         Me.txtPassw.TabIndex = 4
         '
         'btnUsuario
         '
         Me.btnUsuario.AutoSize = True
-        Me.btnUsuario.Location = New System.Drawing.Point(10, 24)
+        Me.btnUsuario.Location = New System.Drawing.Point(8, 20)
+        Me.btnUsuario.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.btnUsuario.Name = "btnUsuario"
-        Me.btnUsuario.Size = New System.Drawing.Size(54, 16)
+        Me.btnUsuario.Size = New System.Drawing.Size(43, 13)
         Me.btnUsuario.TabIndex = 1
         Me.btnUsuario.Text = "Usuario"
         '
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(10, 89)
+        Me.Label1.Location = New System.Drawing.Point(8, 72)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(76, 16)
+        Me.Label1.Size = New System.Drawing.Size(61, 13)
         Me.Label1.TabIndex = 2
         Me.Label1.Text = "Contraseña"
         '
         'IS_Cliente
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(382, 482)
+        Me.ClientSize = New System.Drawing.Size(286, 392)
         Me.Controls.Add(Me.Panel1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "IS_Cliente"
         Me.Text = "IS_Cliente"
         Me.Panel1.ResumeLayout(False)
