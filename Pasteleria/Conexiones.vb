@@ -64,21 +64,23 @@ Module Conexion
     End Sub
 
 
+
+
     '-------!!-----
-    'Public Sub DeleteFromTable(table As String, condition As String, value As String)
-    'Dim query As String = $"Delete From {table} where {condition} = {value}"
+    Public Sub DeleteFromTable(table As String, condition As String, value As String)
+        Dim query As String = $"Delete From {table} where {condition} = {value}"
 
-    'Using cmd As New SqlCommand(query, connect)
-    'Try
-    '           OpenConnection()
-    '          cmd.ExecuteNonQuery()
+        Using cmd As New SqlCommand(query, connect)
+            Try
+                OpenConnection()
+                cmd.ExecuteNonQuery()
 
-    'Catch ex As Exception
+            Catch ex As Exception
 
-    'End Try
-    'End Using
+            End Try
+        End Using
 
-    'End Sub
+    End Sub
 
 
 
