@@ -19,7 +19,6 @@ C:\Users\fall3\source\repos\Pasteleria\Pasteleria\obj\Debug\Pasteleria.IS_Client
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.AssemblyReference.cache
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Conexiones.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inicio.resources
-E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.IS_Cliente.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.MenuCliente.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Resources.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.NuevoEmpleado.resources

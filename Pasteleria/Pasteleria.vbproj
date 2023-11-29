@@ -97,12 +97,6 @@
     <Compile Include="Inventario.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MenuUsuario.Designer.vb">
-      <DependentUpon>MenuUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="MenuUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -124,12 +118,6 @@
     <Compile Include="NuevoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="NuevoUsuario.Designer.vb">
-      <DependentUpon>NuevoUsuario.vb</DependentUpon>
-    </Compile>
-    <Compile Include="NuevoUsuario.vb">
-      <SubType>Form</SubType>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Clientes.resx">
@@ -144,9 +132,6 @@
     <EmbeddedResource Include="Inventario.resx">
       <DependentUpon>Inventario.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MenuUsuario.resx">
-      <DependentUpon>MenuUsuario.vb</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.vb</LastGenOutput>
@@ -155,9 +140,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoEmpleado.resx">
       <DependentUpon>NuevoEmpleado.vb</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="NuevoUsuario.resx">
-      <DependentUpon>NuevoUsuario.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
