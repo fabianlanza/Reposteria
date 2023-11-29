@@ -27,4 +27,8 @@
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         formManager.OpenForm(NuevoEmpleado, Me)
     End Sub
+
+    Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
+        formManager.OpenForm(Inventario, Me)
+    End Sub
 End Class
