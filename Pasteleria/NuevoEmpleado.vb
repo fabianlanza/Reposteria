@@ -3,8 +3,8 @@
 Public Class NuevoEmpleado
 
     Dim formManager As New FormManager()
-
     Dim datos As String
+
     Private Sub btnRegistrar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' "
 
