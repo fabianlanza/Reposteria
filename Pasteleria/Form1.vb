@@ -9,11 +9,11 @@
 
     End Sub
 
-    Private Sub btnRegistrar_Click(sender As Object, e As EventArgs)
-        formManager.OpenForm(NuevoUsuario, Me)
-        NuevoUsuario.Show()
-        Me.Hide()
-    End Sub
+    'Private Sub btnRegistrar_Click(sender As Object, e As EventArgs)
+    ' formManager.OpenForm(NuevoUsuario, Me)
+    ' NuevoUsuario.Show()
+    'Me.Hide()
+    ' End Sub
 
     Private Sub Login_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
