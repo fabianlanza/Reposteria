@@ -22,11 +22,41 @@
 
 
 
+
     Private Sub Limpiar()
         txtTipoPastel.Text = ""
         txtCosto.Text = ""
         txtCantidad.Text = ""
-
     End Sub
+
+    Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
+        If dgvInventario.SelectedCells.Count > 0 Then
+            Dim selectedRowIndex As Integer = dgvInventario.SelectedCells(0).RowIndex
+            Dim pastelId As String = dgvInventario.Rows(selectedRowIndex).Cells("IdPastel").Value.ToString()
+
+            ' Borra al empleado seleccionado usando the ID
+            DeleteFromTable("Pastel", "IdPastel", pastelId)
+        Else
+            MessageBox.Show("Please select a row to delete.")
+        End If
+        MsgBox("Registro Eliminado correctamente")
+        LoadData(dgvInventario, "Pastel")
+    End Sub
+
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        formManager.OpenForm(Inicio, Me)
+    End Sub
+
+    Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvInventario.CellContentClick
+        If e.RowIndex >= 0 Then
+            Dim pastelId As String = dgvInventario.Rows(e.RowIndex).Cells("IdPastel").Value.ToString()
+
+
+            ' Elimina al Empleado Usando la Funcion DelteFrom Table
+            DeleteFromTable("Pastel", "IdPastel", pastelId)
+        End If
+    End Sub
+
+
 
 End Class
