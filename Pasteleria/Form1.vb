@@ -31,4 +31,8 @@
     Private Sub btnInventario_Click(sender As Object, e As EventArgs) Handles btnInventario.Click
         formManager.OpenForm(Inventario, Me)
     End Sub
+
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
+        formManager.OpenForm(Historial, Me)
+    End Sub
 End Class

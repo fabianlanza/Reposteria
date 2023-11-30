@@ -50,3 +50,4 @@ E:\Github\Reposteria\Pasteleria\bin\Debug\Pasteleria.xml
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Clientes.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
+C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Historial.resources

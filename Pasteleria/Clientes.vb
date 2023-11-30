@@ -1,4 +1,6 @@
 ﻿Imports System.Data.SqlClient
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+
 Public Class Clientes
 
     Dim formManager As FormManager = New FormManager
@@ -76,6 +78,23 @@ Public Class Clientes
         txtTelefono.Text = ""
         txtDomicilio.Text = ""
     End Sub
+
+    'Mostrar los datos dentro de un DataGridView en TextBoxes
+    Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
+
+        Dim index As Integer
+        index = e.RowIndex
+
+        Dim selectedRow As DataGridViewRow
+        selectedRow = dgvClientes.Rows(index)
+
+        txtNombre.Text = selectedRow.Cells(1).Value.ToString
+        txtEmail.Text = selectedRow.Cells(2).Value.ToString
+        txtTelefono.Text = selectedRow.Cells(3).Value.ToString
+        txtDomicilio.Text = selectedRow.Cells(4).Value.ToString
+
+    End Sub
+
 
 
 End Class
