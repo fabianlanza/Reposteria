@@ -1,4 +1,5 @@
-﻿Imports System.Data.SqlClient
+﻿Imports System.Data.Common
+Imports System.Data.SqlClient
 Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class Clientes
@@ -80,6 +81,7 @@ Public Class Clientes
     End Sub
 
     'Mostrar los datos dentro de un DataGridView en TextBoxes
+    'Error when selecting column name
     Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
 
         Dim index As Integer
@@ -95,13 +97,19 @@ Public Class Clientes
 
     End Sub
 
+
+
+    'ERROR
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
 
-        Dim column As String = "Nombre" + "Email" + "Tel" + "Domicilio"
+        Dim query As String = $"UPDATE Cliente SET  Nombre = {txtNombre.Text}, Email = {txtEmail.Text}, Tel = {txtTelefono.Text}, Domicilio = {txtDomicilio.Text}"
 
-        datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
-
-        UpdateTable("Cliente", column, datos, "IdCliente")
+        UpdateTable(query)
+        'Dim column As String = "Nombre" & "Email" & "Tel" & "Domicilio"
+        'Dim selectedRowIndex As Integer
+        'If dgvClientes.SelectedCells.Count > 0 Then
+        'selectedRowIndex = dgvClientes.SelectedCells(0).RowIndex
+        'End If
 
 
     End Sub

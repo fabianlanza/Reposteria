@@ -117,39 +117,21 @@ Module Conexion
 
 
 
-    '------------Jared------------
-    Public Sub UpdateTable(table As String, column As String, value As String, condition As String)
+    '------------Jared-----------
 
-        Dim query As String = $"UPDATE {table} SET {column} = {value} WHERE {condition}"
+    Public Sub UpdateTable(query As String)
 
         Using cmd As New SqlCommand(query, connect)
-            'cmd.Parameters.AddWithValue("@newValue1", newValue1)
-            'cmd.Parameters.AddWithValue("@newValue2", newValue2)
-            'cmd.Parameters.AddWithValue("@newValue3", newValue3)
-            'cmd.Parameters.AddWithValue("@employeeId", column)
-
             Try
                 OpenConnection()
-
-                Dim paramCol() As String = column.Split(",")
-                For i As Integer = 0 To paramCol.Length - 1
-                    cmd.Parameters.AddWithValue($"@param{i}", paramCol(i).Trim())
-                Next
-
-                Dim paramValue() As String = value.Split(",")
-                For i As Integer = 0 To paramValue.Length - 1
-                    cmd.Parameters.AddWithValue($"@param{i}", paramValue(i).Trim())
-                Next
-
-
-                cmd.CommandText = query
                 cmd.ExecuteNonQuery()
             Catch ex As Exception
-                MessageBox.Show("Error updating data: " & ex.Message)
+                MessageBox.Show("Error: " & ex.Message)
             Finally
                 CloseConnection()
             End Try
         End Using
+
     End Sub
 
 
