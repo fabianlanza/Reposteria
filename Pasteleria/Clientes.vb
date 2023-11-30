@@ -95,6 +95,14 @@ Public Class Clientes
 
     End Sub
 
+    Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
+
+        Dim column As String = "Nombre" + "Email" + "Tel" + "Domicilio"
+
+        datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
+
+        UpdateTable("Cliente", column, datos, "IdCliente")
 
 
+    End Sub
 End Class

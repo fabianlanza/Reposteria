@@ -25,6 +25,8 @@ Partial Class Historial
         Me.dgvHistorial = New System.Windows.Forms.DataGridView()
         Me.btnOrdernar = New System.Windows.Forms.Button()
         Me.TextBox1 = New System.Windows.Forms.TextBox()
+        Me.btnMostrar = New System.Windows.Forms.Button()
+        Me.ComboBox1 = New System.Windows.Forms.ComboBox()
         CType(Me.dgvHistorial, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -51,14 +53,33 @@ Partial Class Historial
         '
         Me.TextBox1.Location = New System.Drawing.Point(168, 188)
         Me.TextBox1.Name = "TextBox1"
-        Me.TextBox1.Size = New System.Drawing.Size(100, 22)
+        Me.TextBox1.Size = New System.Drawing.Size(121, 22)
         Me.TextBox1.TabIndex = 2
+        '
+        'btnMostrar
+        '
+        Me.btnMostrar.Location = New System.Drawing.Point(12, 135)
+        Me.btnMostrar.Name = "btnMostrar"
+        Me.btnMostrar.Size = New System.Drawing.Size(102, 28)
+        Me.btnMostrar.TabIndex = 3
+        Me.btnMostrar.Text = "Mostrar"
+        Me.btnMostrar.UseVisualStyleBackColor = True
+        '
+        'ComboBox1
+        '
+        Me.ComboBox1.FormattingEnabled = True
+        Me.ComboBox1.Location = New System.Drawing.Point(168, 135)
+        Me.ComboBox1.Name = "ComboBox1"
+        Me.ComboBox1.Size = New System.Drawing.Size(121, 24)
+        Me.ComboBox1.TabIndex = 4
         '
         'Historial
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(833, 619)
+        Me.Controls.Add(Me.ComboBox1)
+        Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.TextBox1)
         Me.Controls.Add(Me.btnOrdernar)
         Me.Controls.Add(Me.dgvHistorial)
@@ -73,4 +94,6 @@ Partial Class Historial
     Friend WithEvents dgvHistorial As DataGridView
     Friend WithEvents btnOrdernar As Button
     Friend WithEvents TextBox1 As TextBox
+    Friend WithEvents btnMostrar As Button
+    Friend WithEvents ComboBox1 As ComboBox
 End Class

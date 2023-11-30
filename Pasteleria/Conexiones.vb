@@ -95,25 +95,62 @@ Module Conexion
 
 
 
-    'query As String = $"UPDATE {table} SET Column1 = @newValue1, Column2 = @newValue2, Column3 = @newValue3 WHERE EmployeeIDColumn = @employeeId"
+    'Dim query As String = $"UPDATE {table} SET Column1 = @newValue1, Column2 = @newValue2, Column3 = @newValue3 WHERE EmployeeIDColumn = @employeeId"
 
 
     'Using cmd As New SqlCommand(query, connect)
-    'cmd.Parameters.AddWithValue("@newValue1", newValue1)
-    'cmd.Parameters.AddWithValue("@newValue2", newValue2)
-    'cmd.Parameters.AddWithValue("@newValue3", newValue3)
-    ' cmd.Parameters.AddWithValue("@employeeId", employeeId)
+    '       cmd.Parameters.AddWithValue("@newValue1", newValue1)
+    '      cmd.Parameters.AddWithValue("@newValue2", newValue2)
+    '     cmd.Parameters.AddWithValue("@newValue3", newValue3)
+    '    cmd.Parameters.AddWithValue("@employeeId", employeeId)
 
     'Try
-    ' connect.Open()
-    'cmd.ExecuteNonQuery()
+    '            connect.Open()
+    '            cmd.ExecuteNonQuery()
     'Catch ex As Exception
-    'MessageBox.Show("Error updating data: " & ex.Message)
-    ' Finally
-    ' connect.Close()
+    '           MessageBox.Show("Error updating data: " & ex.Message)
+    'Finally
+    '           connect.Close()
     'End Try
     'End Using
-    '  End Sub
+    'End Sub
+
+
+
+    '------------Jared------------
+    Public Sub UpdateTable(table As String, column As String, value As String, condition As String)
+
+        Dim query As String = $"UPDATE {table} SET {column} = {value} WHERE {condition}"
+
+        Using cmd As New SqlCommand(query, connect)
+            'cmd.Parameters.AddWithValue("@newValue1", newValue1)
+            'cmd.Parameters.AddWithValue("@newValue2", newValue2)
+            'cmd.Parameters.AddWithValue("@newValue3", newValue3)
+            'cmd.Parameters.AddWithValue("@employeeId", column)
+
+            Try
+                OpenConnection()
+
+                Dim paramCol() As String = column.Split(",")
+                For i As Integer = 0 To paramCol.Length - 1
+                    cmd.Parameters.AddWithValue($"@param{i}", paramCol(i).Trim())
+                Next
+
+                Dim paramValue() As String = value.Split(",")
+                For i As Integer = 0 To paramValue.Length - 1
+                    cmd.Parameters.AddWithValue($"@param{i}", paramValue(i).Trim())
+                Next
+
+
+                cmd.CommandText = query
+                cmd.ExecuteNonQuery()
+            Catch ex As Exception
+                MessageBox.Show("Error updating data: " & ex.Message)
+            Finally
+                CloseConnection()
+            End Try
+        End Using
+    End Sub
 
 
 
