@@ -3,7 +3,7 @@ Imports iText.Kernel.Pdf
 Imports iText.Layout.Element
 Imports System.IO
 Imports System.Data.SqlClient
-
+Imports iText.IO.Image
 
 Public Class Reportes
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
@@ -14,10 +14,20 @@ Public Class Reportes
 
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
-            ' Query SQL para seleccionar datos de la tabla "cliente"
-            Dim query As String = "SELECT * FROM Cliente"
+            ' Obtener la ruta de la imagen relativa al directorio actual
+            Dim imagePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Img", "Logo.png")
 
-            ' Obtener los datos de la base de datos utilizando la función LoadData de tu módulo 'Conexion'
+
+            ' Mostrar la ruta de la imagen para verificar
+            MessageBox.Show("Ruta de la imagen: " & imagePath)
+
+            ' Verificar el directorio de trabajo actual
+            MessageBox.Show("Directorio de trabajo: " & Application.StartupPath)
+
+            ' Query SQL para seleccionar todos los datos de la tabla "Clientes"
+            Dim query As String = "SELECT * FROM Cliente" ' Cambiar aquí por la tabla y columnas deseadas
+
+            ' Obtener los datos de la base de datos utilizando la función GetDataFromDatabase
             Dim data As String = GetDataFromDatabase(query)
 
             ' Obtener la ruta de la carpeta Descargas
@@ -31,6 +41,16 @@ Public Class Reportes
             Using pdfDoc As New PdfDocument(New PdfWriter(filePath))
                 ' Crear un documento
                 Dim document As New Document(pdfDoc)
+
+                ' Cargar la imagen desde la ruta especificada
+                Dim image As New iText.Layout.Element.Image(ImageDataFactory.Create(imagePath))
+
+                ' Ajustar tamaño de la imagen si es necesario
+                image.SetWidth(100) ' Ajustar el ancho de la imagen según tus necesidades
+                image.SetHeight(100) ' Ajustar la altura de la imagen según tus necesidades
+
+                ' Agregar la imagen al PDF
+                document.Add(image)
 
                 ' Agregar los datos obtenidos de la base de datos al PDF como un párrafo
                 document.Add(New Paragraph(data))
