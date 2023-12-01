@@ -33,13 +33,15 @@ Partial Class Inventario
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
+        Me.Panel1 = New System.Windows.Forms.Panel()
         CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.Panel1.SuspendLayout()
         Me.SuspendLayout()
         '
         'BtnModificar
         '
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.Location = New System.Drawing.Point(271, 450)
+        Me.BtnModificar.Location = New System.Drawing.Point(244, 303)
         Me.BtnModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnModificar.Name = "BtnModificar"
         Me.BtnModificar.Size = New System.Drawing.Size(100, 47)
@@ -50,7 +52,7 @@ Partial Class Inventario
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(438, 450)
+        Me.BtnEliminar.Location = New System.Drawing.Point(441, 303)
         Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.BtnEliminar.Name = "BtnEliminar"
         Me.BtnEliminar.Size = New System.Drawing.Size(100, 47)
@@ -61,7 +63,7 @@ Partial Class Inventario
         'dgvInventario
         '
         Me.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvInventario.Location = New System.Drawing.Point(47, 148)
+        Me.dgvInventario.Location = New System.Drawing.Point(30, 25)
         Me.dgvInventario.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvInventario.Name = "dgvInventario"
         Me.dgvInventario.RowHeadersWidth = 51
@@ -71,7 +73,7 @@ Partial Class Inventario
         'btnRegresar
         '
         Me.btnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegresar.Location = New System.Drawing.Point(610, 450)
+        Me.btnRegresar.Location = New System.Drawing.Point(635, 303)
         Me.btnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnRegresar.Name = "btnRegresar"
         Me.btnRegresar.Size = New System.Drawing.Size(103, 47)
@@ -82,7 +84,7 @@ Partial Class Inventario
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(110, 450)
+        Me.btnAgregar.Location = New System.Drawing.Point(30, 303)
         Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.btnAgregar.Name = "btnAgregar"
         Me.btnAgregar.Size = New System.Drawing.Size(100, 47)
@@ -147,17 +149,25 @@ Partial Class Inventario
         Me.txtCantidad.Size = New System.Drawing.Size(183, 24)
         Me.txtCantidad.TabIndex = 40
         '
+        'Panel1
+        '
+        Me.Panel1.Controls.Add(Me.dgvInventario)
+        Me.Panel1.Controls.Add(Me.btnAgregar)
+        Me.Panel1.Controls.Add(Me.BtnModificar)
+        Me.Panel1.Controls.Add(Me.btnRegresar)
+        Me.Panel1.Controls.Add(Me.BtnEliminar)
+        Me.Panel1.Location = New System.Drawing.Point(25, 224)
+        Me.Panel1.Name = "Panel1"
+        Me.Panel1.Size = New System.Drawing.Size(784, 369)
+        Me.Panel1.TabIndex = 41
+        '
         'Inventario
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(833, 619)
+        Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.txtCantidad)
-        Me.Controls.Add(Me.BtnModificar)
-        Me.Controls.Add(Me.BtnEliminar)
-        Me.Controls.Add(Me.dgvInventario)
-        Me.Controls.Add(Me.btnRegresar)
-        Me.Controls.Add(Me.btnAgregar)
         Me.Controls.Add(Me.txtTipoPastel)
         Me.Controls.Add(Me.txtCosto)
         Me.Controls.Add(Me.Label3)
@@ -166,6 +176,7 @@ Partial Class Inventario
         Me.Name = "Inventario"
         Me.Text = "Inventario"
         CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.Panel1.ResumeLayout(False)
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -182,4 +193,5 @@ Partial Class Inventario
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
     Friend WithEvents txtCantidad As TextBox
+    Friend WithEvents Panel1 As Panel
 End Class

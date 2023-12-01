@@ -171,6 +171,8 @@ Partial Class Clientes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui_2
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(833, 619)
         Me.Controls.Add(Me.btnModificar)
         Me.Controls.Add(Me.txtDomicilio)
