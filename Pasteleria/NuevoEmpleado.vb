@@ -71,23 +71,48 @@ Public Class NuevoEmpleado
 
 
 
+    Private Sub dgvEmpleado_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvEmpleado.CellClick
+        Dim index As Integer
+        index = e.RowIndex
+
+        Dim selectedRow As DataGridViewRow
+        selectedRow = dgvEmpleado.Rows(index)
+
+        txtNombre.Text = selectedRow.Cells(1).Value.ToString
+        txtEmail.Text = selectedRow.Cells(2).Value.ToString
+        txtTelefono.Text = selectedRow.Cells(3).Value.ToString
+
+    End Sub
+
 
 
     Private Sub BtnModificar_Click(sender As Object, e As EventArgs) Handles BtnModificar.Click
 
-        ' Dim newValue1 As String = txtNombre.Text
-        ' Dim newValue2 As String = txtEmail.Text
-        ' Dim newValue3 As String = txtTelefono.Text
+        Dim id As Integer = Convert.ToInt32(dgvEmpleado.SelectedCells(0).Value)
 
 
-        ' Dim selectedRowIndex As Integer = dgvEmpleado.SelectedCells(0).RowIndex
-        ' Dim employeeId As String = dgvEmpleado.Rows(selectedRowIndex).Cells("IdEmpleado").Value.ToString()
+        Dim query As String = "UPDATE Empleado SET Nombre = @Nombre, Email = @Email, Tel = @Tel WHERE IdEmpleado = @IdEmpleado"
 
+        Using cmd As New SqlCommand(query, connect)
 
-        ' ModificarDatos("Empleado", newValue1, newValue2, newValue3, employeeId)
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text)
+            cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@Tel", txtTelefono.Text)
+            cmd.Parameters.AddWithValue("@IdEmpleado", id)
 
-        ' MsgBox("Registro Modificado correctamente")
-        '  LoadData(dgvEmpleado, "Empleado")
+            Try
+                OpenConnection()
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Registro actualizado correctamente.")
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            Finally
+                CloseConnection()
+            End Try
+        End Using
+        LoadData(dgvEmpleado, "Empleado")
     End Sub
+
+
 
 End Class
