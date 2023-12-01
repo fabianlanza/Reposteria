@@ -15,7 +15,7 @@ Public Class Reportes
     Private Sub Button1_Click(sender As Object, e As EventArgs) Handles Button1.Click
         Try
             ' Obtener la ruta de la imagen relativa al directorio actual
-            Dim imagePath As String = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "..\Reposteria\Pasteleria\Img\Logo.jpg")
+            Dim imagePath As String = Path.Combine(Directory.GetParent(AppDomain.CurrentDomain.BaseDirectory).Parent.Parent.FullName, "Img", "Logo.jpg")
 
 
             ' Mostrar la ruta de la imagen para verificar
