@@ -49,7 +49,6 @@ E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Clientes.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Historial.resources
-E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Historial.resources
 E:\Github\Reposteria\Pasteleria\bin\Debug\itext.barcodes.dll
 E:\Github\Reposteria\Pasteleria\bin\Debug\itext.bouncy-castle-connector.dll
 E:\Github\Reposteria\Pasteleria\bin\Debug\itext.commons.dll
@@ -103,3 +102,8 @@ E:\Github\Reposteria\Pasteleria\bin\Debug\System.Runtime.CompilerServices.Unsafe
 E:\Github\Reposteria\Pasteleria\bin\Debug\System.Threading.Tasks.Extensions.xml
 E:\Github\Reposteria\Pasteleria\bin\Debug\System.ValueTuple.xml
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.CopyComplete
+E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Reportes.resources
+E:\Github\Reposteria\Pasteleria\bin\Debug\BouncyCastle.Cryptography.dll
+E:\Github\Reposteria\Pasteleria\bin\Debug\itext.bouncy-castle-adapter.dll
+E:\Github\Reposteria\Pasteleria\bin\Debug\BouncyCastle.Cryptography.xml
+E:\Github\Reposteria\Pasteleria\bin\Debug\itext.bouncy-castle-adapter.xml

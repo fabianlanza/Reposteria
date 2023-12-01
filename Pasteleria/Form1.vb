@@ -32,7 +32,7 @@
         formManager.OpenForm(Inventario, Me)
     End Sub
 
-    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnHistorial.Click
-        formManager.OpenForm(Historial, Me)
+    Private Sub btnHistorial_Click(sender As Object, e As EventArgs) Handles btnReportes.Click
+        formManager.OpenForm(Reportes, Me)
     End Sub
 End Class
