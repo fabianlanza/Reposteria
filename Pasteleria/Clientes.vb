@@ -99,18 +99,33 @@ Public Class Clientes
 
 
 
-    'ERROR
+
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
-
-        Dim query As String = $"UPDATE Cliente SET  Nombre = {txtNombre.Text}, Email = {txtEmail.Text}, Tel = {txtTelefono.Text}, Domicilio = {txtDomicilio.Text}"
-
-        UpdateTable(query)
-        'Dim column As String = "Nombre" & "Email" & "Tel" & "Domicilio"
-        'Dim selectedRowIndex As Integer
-        'If dgvClientes.SelectedCells.Count > 0 Then
-        'selectedRowIndex = dgvClientes.SelectedCells(0).RowIndex
-        'End If
+        Dim id As Integer = Convert.ToInt32(dgvClientes.SelectedCells(0).Value)
 
 
+        Dim query As String = "UPDATE Cliente SET Nombre = @Nombre, Email = @Email, Tel = @Tel, Domicilio = @Domicilio WHERE IdCliente = @IdCliente"
+
+        Using cmd As New SqlCommand(query, connect)
+
+            cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text)
+            cmd.Parameters.AddWithValue("@Email", txtEmail.Text)
+            cmd.Parameters.AddWithValue("@Tel", txtTelefono.Text)
+            cmd.Parameters.AddWithValue("@Domicilio", txtDomicilio.Text)
+            cmd.Parameters.AddWithValue("@IdCliente", id)
+
+            Try
+                OpenConnection()
+                cmd.ExecuteNonQuery()
+                MessageBox.Show("Registro actualizado correctamente.")
+            Catch ex As Exception
+                MessageBox.Show("Error: " & ex.Message)
+            Finally
+                CloseConnection()
+            End Try
+        End Using
+        LoadData(dgvClientes, "Cliente")
     End Sub
+
+
 End Class

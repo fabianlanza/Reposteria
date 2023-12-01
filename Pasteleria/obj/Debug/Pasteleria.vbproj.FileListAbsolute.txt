@@ -19,10 +19,8 @@ C:\Users\fall3\source\repos\Pasteleria\Pasteleria\obj\Debug\Pasteleria.IS_Client
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.AssemblyReference.cache
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Conexiones.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inicio.resources
-E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.MenuCliente.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Resources.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.NuevoEmpleado.resources
-E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.NuevoUsuario.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.GenerateResource.cache
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.CoreCompileInputs.cache
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.exe
@@ -51,3 +49,4 @@ E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Clientes.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Inventario.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Historial.resources
+E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Historial.resources

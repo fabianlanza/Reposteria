@@ -163,5 +163,11 @@
     </None>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Img\LogoPng.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
 </Project>
