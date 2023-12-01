@@ -60,11 +60,11 @@ Public Class Reportes
                 ' Abrir la conexión
                 connection.Open()
 
-                ' Crear el comando SQL
+                ' Crea el comando SQL
                 Using command As New SqlCommand(query, connection)
-                    ' Ejecutar el comando y obtener los datos
+                    ' Ejecuta el comando y obtener los datos
                     Using reader As SqlDataReader = command.ExecuteReader()
-                        ' Leer los datos y almacenarlos en la cadena 'data'
+                        ' Lee los datos y almacenarlos en la cadena 'data'
                         While reader.Read()
                             ' Supongamos que los datos están en columnas "Nombre" y "Apellido"
                             data &= "Nombre: " & reader("Nombre").ToString() & ", Email: " & reader("Email").ToString() & vbCrLf
@@ -78,15 +78,5 @@ Public Class Reportes
 
         Return data
     End Function
-
-
-
-
-
-
-
-
-
-
 
 End Class
