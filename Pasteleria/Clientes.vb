@@ -14,16 +14,25 @@ Public Class Clientes
 
     Private Sub btnAgregarCliente_Click(sender As Object, e As EventArgs) Handles btnAgregarCliente.Click
 
-        datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
+        Dim dataTable As DataTable = DirectCast(dgvClientes.DataSource, DataTable)
 
-        Try
-            InsertIntoTable("Cliente", datos)
-            MsgBox("Datos agregados!", MessageBoxButtons.OK, MessageBoxIcon.Information)
-        Catch ex As Exception
-            MessageBox.Show("Error inserting data: " & ex.Message)
-        End Try
-        LoadData(dgvClientes, "Cliente") 'refresca El data grid para ver los nuevos empleados
-        Limpiar() 'Limpiando los contenedores
+        Dim duplicateRows As DataRow() = dataTable.Select("Nombre = '" & txtNombre.Text & "' OR Email = '" & txtEmail.Text & "' OR Tel = '" & txtTelefono.Text & "' OR Domicilio = '" & txtDomicilio.Text & "'")
+
+        If duplicateRows.Length > 0 Then
+            MessageBox.Show("Ya existe un dato ingresado")
+        Else
+            datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
+
+            Try
+                InsertIntoTable("Cliente", datos)
+                MsgBox("Datos agregados", MessageBoxButtons.OK, MessageBoxIcon.Information)
+            Catch ex As Exception
+                MessageBox.Show("Error inserting data: " & ex.Message)
+            End Try
+
+            LoadData(dgvClientes, "Cliente")
+            Limpiar()
+        End If
 
 
     End Sub
@@ -80,22 +89,6 @@ Public Class Clientes
         txtDomicilio.Text = ""
     End Sub
 
-    'Mostrar los datos dentro de un DataGridView en TextBoxes
-    'Error when selecting column name
-    Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
-
-        Dim index As Integer
-        index = e.RowIndex
-
-        Dim selectedRow As DataGridViewRow
-        selectedRow = dgvClientes.Rows(index)
-
-        txtNombre.Text = selectedRow.Cells(1).Value.ToString
-        txtEmail.Text = selectedRow.Cells(2).Value.ToString
-        txtTelefono.Text = selectedRow.Cells(3).Value.ToString
-        txtDomicilio.Text = selectedRow.Cells(4).Value.ToString
-
-    End Sub
 
 
 
@@ -125,6 +118,32 @@ Public Class Clientes
             End Try
         End Using
         LoadData(dgvClientes, "Cliente")
+    End Sub
+
+    'Mostrar los datos dentro de un DataGridView en TextBoxes
+
+    Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
+        'get table column values to textboxes
+        Dim index As Integer
+        index = e.RowIndex
+
+        Dim selectedRow As DataGridViewRow
+        selectedRow = dgvClientes.Rows(index)
+
+        txtNombre.Text = selectedRow.Cells(1).Value.ToString
+        txtEmail.Text = selectedRow.Cells(2).Value.ToString
+        txtTelefono.Text = selectedRow.Cells(3).Value.ToString
+        txtDomicilio.Text = selectedRow.Cells(4).Value.ToString
+    End Sub
+
+
+
+    Private Sub dgvClientes_MouseLeave(sender As Object, e As EventArgs) Handles dgvClientes.MouseLeave
+        btnAgregarCliente.Enabled = True
+    End Sub
+
+    Private Sub dgvClientes_MouseHover(sender As Object, e As EventArgs) Handles dgvClientes.MouseHover
+        btnAgregarCliente.Enabled = False
     End Sub
 
 
