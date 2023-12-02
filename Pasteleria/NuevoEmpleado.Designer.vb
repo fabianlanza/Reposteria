@@ -119,7 +119,7 @@ Partial Class NuevoEmpleado
         '
         Me.dgvEmpleado.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.dgvEmpleado.Location = New System.Drawing.Point(57, 178)
-        Me.dgvEmpleado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.dgvEmpleado.Margin = New System.Windows.Forms.Padding(4)
         Me.dgvEmpleado.Name = "dgvEmpleado"
         Me.dgvEmpleado.RowHeadersWidth = 51
         Me.dgvEmpleado.Size = New System.Drawing.Size(708, 272)

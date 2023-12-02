@@ -14,26 +14,29 @@ Public Class Clientes
 
     Private Sub btnAgregarCliente_Click(sender As Object, e As EventArgs) Handles btnAgregarCliente.Click
 
-        Dim dataTable As DataTable = DirectCast(dgvClientes.DataSource, DataTable)
-
-        Dim duplicateRows As DataRow() = dataTable.Select("Nombre = '" & txtNombre.Text & "' OR Email = '" & txtEmail.Text & "' OR Tel = '" & txtTelefono.Text & "' OR Domicilio = '" & txtDomicilio.Text & "'")
-
-        If duplicateRows.Length > 0 Then
-            MessageBox.Show("Ya existe un dato ingresado")
+        If (txtNombre.Text = String.Empty Or txtEmail.Text = String.Empty Or txtTelefono.Text = String.Empty Or txtDomicilio.Text = String.Empty) Then
+            MessageBox.Show("Los espacios no pueden estar en blanco")
         Else
-            datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
+            Dim dataTable As DataTable = DirectCast(dgvClientes.DataSource, DataTable)
 
-            Try
-                InsertIntoTable("Cliente", datos)
-                MsgBox("Datos agregados", MessageBoxButtons.OK, MessageBoxIcon.Information)
-            Catch ex As Exception
-                MessageBox.Show("Error inserting data: " & ex.Message)
-            End Try
+            Dim duplicateRows As DataRow() = dataTable.Select("Nombre = '" & txtNombre.Text & "' OR Email = '" & txtEmail.Text & "' OR Tel = '" & txtTelefono.Text & "' ")
 
-            LoadData(dgvClientes, "Cliente")
-            Limpiar()
+            If duplicateRows.Length > 0 Then
+                MessageBox.Show("Ya existe un dato ingresado")
+            Else
+                datos = " '" & txtNombre.Text & "' , '" & txtEmail.Text & "' , '" & txtTelefono.Text & "' , '" & txtDomicilio.Text & "' "
+
+                Try
+                    InsertIntoTable("Cliente", datos)
+                    MsgBox("Datos agregados", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                Catch ex As Exception
+                    MessageBox.Show("Error inserting data: " & ex.Message)
+                End Try
+
+                LoadData(dgvClientes, "Cliente")
+                Limpiar()
+            End If
         End If
-
 
     End Sub
 
@@ -73,7 +76,7 @@ Public Class Clientes
             Dim clienteId As String = dgvClientes.Rows(e.RowIndex).Cells("IdCliente").Value.ToString()
 
 
-            ' Elimina al Empleado Usando la Funcion DelteFrom Table
+            ' Elimina al cliente Usando la Funcion DelteFrom Table
             DeleteFromTable("Cliente", "IdCliente", clienteId)
         End If
     End Sub
