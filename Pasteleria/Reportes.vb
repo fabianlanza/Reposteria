@@ -27,7 +27,11 @@ Public Class Reportes
         ElseIf cmbReporte.SelectedItem.ToString() = "Mostrar Pasteles" Then
             sentencia = "SELECT Tipo, Cantidad FROM Pastel WHERE Cantidad > 0;"
             Header = "Mostrar Pasteles"
+        ElseIf cmbReporte.SelectedItem.ToString() = "Ventas Por Mes" Then
+            sentencia = "SELECT MONTH(VP.Fecha) AS Mes, SUM(DV.Cantidad) AS CantidadPastelesVendidos FROM VentaPastel VP JOIN DetalleVenta DV ON VP.IdVenta = DV.IdVenta JOIN Pastel P ON DV.IdPastel = P.IdPastel GROUP BY MONTH(VP.Fecha) ORDER BY Mes;"
+            Header = "Ventas por Mes"
         End If
+
 
         Try
             ' Obtener la ruta de la imagen relativa al directorio actual
@@ -120,6 +124,8 @@ Public Class Reportes
                             ElseIf query.Contains("Pastel") Then
                                 ' Si la consulta es para pasteles, muestra los datos de Tipo y Cantidad
                                 data &= "Tipo: " & reader("Tipo").ToString() & ", Cantidad: " & reader("Cantidad").ToString() & vbCrLf
+                            ElseIf query.Contains("Ventas Por Mes") Then
+                                data &= "Mes: " & reader("Mes").ToString() & ", Cantidad de Pasteles Vendidos: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
                             End If
                         End While
                     End Using

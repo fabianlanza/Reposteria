@@ -39,7 +39,7 @@ Partial Class Reportes
         'cmbReporte
         '
         Me.cmbReporte.FormattingEnabled = True
-        Me.cmbReporte.Items.AddRange(New Object() {"Mostrar Clientes", "Mostrar Pasteles"})
+        Me.cmbReporte.Items.AddRange(New Object() {"Mostrar Clientes", "Mostrar Pasteles", "Ventas Por Mes"})
         Me.cmbReporte.Location = New System.Drawing.Point(242, 139)
         Me.cmbReporte.Name = "cmbReporte"
         Me.cmbReporte.Size = New System.Drawing.Size(121, 21)
