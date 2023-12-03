@@ -141,4 +141,9 @@ Public Class NuevoEmpleado
         LoadData(dgvEmpleado, "Empleado")
     End Sub
 
+
+
+
+
+
 End Class

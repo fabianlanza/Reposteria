@@ -31,7 +31,7 @@ Module Conexion
             dgv.DataSource = dt
 
         Catch ex As Exception
-            MessageBox.Show("Unable to load data")
+            MessageBox.Show("Unable to load data: " & ex.Message)
         Finally
             CloseConnection()
         End Try
@@ -130,6 +130,21 @@ Module Conexion
             End Try
         End Using
 
+    End Sub
+
+
+    Public Sub ResetIdentity(table As String, column As String)
+
+        Try
+            Using cmd As New SqlCommand($"DBCC CHECKIDENT ('{table}', RESEED, 0)", connect)
+                OpenConnection()
+                cmd.ExecuteNonQuery()
+            End Using
+        Catch ex As Exception
+            MessageBox.Show("Error resetting identity: " & ex.Message)
+        Finally
+            CloseConnection()
+        End Try
     End Sub
 
 

@@ -51,11 +51,14 @@ Public Class Clientes
 
             ' Borra al empleado seleccionado usando the ID
             DeleteFromTable("Cliente", "IdCliente", clienteId)
+            MsgBox("Registro Eliminado correctamente")
+            LoadData(dgvClientes, "Cliente")
+
+            ' Reset the identity column
+            ResetIdentity("Cliente", "IdCliente")
         Else
             MessageBox.Show("Please select a row to delete.")
         End If
-        MsgBox("Registro Eliminado correctamente")
-        LoadData(dgvClientes, "Cliente")
 
 
     End Sub

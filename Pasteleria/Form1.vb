@@ -33,5 +33,7 @@
         formManager.OpenForm(NuevoEmpleado, Me)
     End Sub
 
-
+    Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
+        formManager.OpenForm(Ventas, Me)
+    End Sub
 End Class

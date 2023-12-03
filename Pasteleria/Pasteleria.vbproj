@@ -168,6 +168,12 @@
       <DependentUpon>Conexiones.vb</DependentUpon>
     </Compile>
     <Compile Include="Conexiones.vb" />
+    <Compile Include="Encargos.Designer.vb">
+      <DependentUpon>Encargos.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Encargos.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -209,6 +215,12 @@
     <Compile Include="NuevoEmpleado.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Ventas.Designer.vb">
+      <DependentUpon>Ventas.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Ventas.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Clientes.resx">
@@ -234,6 +246,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="NuevoEmpleado.resx">
       <DependentUpon>NuevoEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Ventas.resx">
+      <DependentUpon>Ventas.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

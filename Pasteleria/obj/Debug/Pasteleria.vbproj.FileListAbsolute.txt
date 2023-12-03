@@ -164,3 +164,4 @@ C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\System.Threading.T
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\bin\Debug\System.ValueTuple.xml
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Reportes.resources
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.CopyComplete
+C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Ventas.resources

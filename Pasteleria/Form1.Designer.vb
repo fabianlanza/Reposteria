@@ -27,6 +27,7 @@ Partial Class Inicio
         Me.btnReportes = New System.Windows.Forms.Button()
         Me.btnCliente = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.btnVentas = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -85,6 +86,17 @@ Partial Class Inicio
         Me.PictureBox1.TabIndex = 12
         Me.PictureBox1.TabStop = False
         '
+        'btnVentas
+        '
+        Me.btnVentas.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnVentas.Location = New System.Drawing.Point(508, 488)
+        Me.btnVentas.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnVentas.Name = "btnVentas"
+        Me.btnVentas.Size = New System.Drawing.Size(205, 62)
+        Me.btnVentas.TabIndex = 13
+        Me.btnVentas.Text = "Ventas"
+        Me.btnVentas.UseVisualStyleBackColor = True
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -92,6 +104,7 @@ Partial Class Inicio
         Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(876, 578)
+        Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCliente)
         Me.Controls.Add(Me.btnReportes)
@@ -110,4 +123,5 @@ Partial Class Inicio
     Friend WithEvents btnReportes As Button
     Friend WithEvents btnCliente As Button
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents btnVentas As Button
 End Class
