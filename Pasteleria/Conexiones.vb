@@ -3,7 +3,7 @@
 Module Conexion
     'LAPTOP-S8ASBQKS
     'DESKTOP-AND27IO\SQL
-    Public connect As New SqlConnection("Data Source=DESKTOP-AND27IO\SQL;Initial Catalog=SistemaPasteleria;Integrated Security=True")
+    Public connect As New SqlConnection("Data Source=LAPTOP-S8ASBQKS;Initial Catalog=SistemaPasteleria;Integrated Security=True")
 
     Sub OpenConnection()
         If connect.State = 0 Then

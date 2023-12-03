@@ -14,6 +14,7 @@ Public Class NuevoEmpleado
 
     Private Sub NuevoEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         LoadData(dgvEmpleado, "Empleado")
+
     End Sub
 
 

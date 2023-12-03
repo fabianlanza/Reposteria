@@ -40,9 +40,6 @@ Public Class Clientes
 
     End Sub
 
-
-
-
     Private Sub btnEleminarCliente_Click(sender As Object, e As EventArgs) Handles btnEleminarCliente.Click
 
         If dgvClientes.SelectedCells.Count > 0 Then
@@ -64,15 +61,9 @@ Public Class Clientes
     End Sub
 
 
-
-
     Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
         formManager.OpenForm(Inicio, Me)
     End Sub
-
-
-
-
 
     Private Sub dgvClientes_CellContentClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellContentClick
         If e.RowIndex >= 0 Then
@@ -85,18 +76,12 @@ Public Class Clientes
     End Sub
 
 
-
-
-
     Private Sub Limpiar()
         txtNombre.Text = ""
         txtEmail.Text = ""
         txtTelefono.Text = ""
         txtDomicilio.Text = ""
     End Sub
-
-
-
 
 
     Private Sub btnModificar_Click(sender As Object, e As EventArgs) Handles btnModificar.Click
@@ -126,8 +111,8 @@ Public Class Clientes
         LoadData(dgvClientes, "Cliente")
     End Sub
 
-    'Mostrar los datos dentro de un DataGridView en TextBoxes
 
+    'Mostrar los datos dentro de un DataGridView en TextBoxes
     Private Sub dgvClientes_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles dgvClientes.CellClick
         'get table column values to textboxes
         Dim index As Integer
