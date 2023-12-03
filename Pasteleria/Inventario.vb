@@ -9,7 +9,6 @@ Public Class Inventario
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
-
         If (txtTipoPastel.Text = String.Empty Or txtCosto.Text = String.Empty Or txtCantidad.Text = String.Empty) Then
             MessageBox.Show("Los espacios no pueden estar en blanco")
         Else
@@ -23,8 +22,16 @@ Public Class Inventario
                 datos = " '" & txtTipoPastel.Text & "' , '" & txtCosto.Text & "' , '" & txtCantidad.Text & "' "
 
                 Try
+                    ' Insert into Pastel table
                     InsertIntoTable("Pastel", datos)
-                    MsgBox("Datos agregados", MessageBoxButtons.OK, MessageBoxIcon.Information)
+                    MsgBox("Datos agregados a Pastel", MessageBoxButtons.OK, MessageBoxIcon.Information)
+
+                    ' Retrieve the IdPastel of the recently added cake
+                    Dim idPastel As Integer = GetIdPastel(txtTipoPastel.Text, txtCosto.Text, txtCantidad.Text)
+
+                    ' Insert into DetalleVenta table
+                    InsertIntoDetalleVenta(idPastel, Convert.ToInt32(txtCantidad.Text))
+                    MsgBox("Datos agregados a DetalleVenta", MessageBoxButtons.OK, MessageBoxIcon.Information)
                 Catch ex As Exception
                     MessageBox.Show("Error inserting data: " & ex.Message)
                 End Try
@@ -35,14 +42,31 @@ Public Class Inventario
         End If
     End Sub
 
+    Private Function GetIdPastel(tipo As String, costo As String, cantidad As String) As Integer
+        Dim query As String = "SELECT IdPastel FROM Pastel WHERE Tipo = @Tipo AND Costo = @Costo AND Cantidad = @Cantidad"
 
+        Using cmd As New SqlCommand(query, connect)
+            cmd.Parameters.AddWithValue("@Tipo", tipo)
+            cmd.Parameters.AddWithValue("@Costo", costo)
+            cmd.Parameters.AddWithValue("@Cantidad", cantidad)
 
+            Try
+                OpenConnection()
+                Return Convert.ToInt32(cmd.ExecuteScalar())
+            Catch ex As Exception
+                MessageBox.Show($"Error retrieving IdPastel: {ex.Message}")
+                Return -1
+            Finally
+                CloseConnection()
+            End Try
+        End Using
+    End Function
 
-    Private Sub Limpiar()
-        txtTipoPastel.Text = ""
-        txtCosto.Text = ""
-        txtCantidad.Text = ""
+    Private Sub InsertIntoDetalleVenta(idPastel As Integer, cantidad As Integer)
+        Dim datosDetalleVenta As String = $"'{idPastel}', '{cantidad}'"
+        InsertIntoTable("DetalleVenta", datosDetalleVenta)
     End Sub
+
 
     Private Sub BtnEliminar_Click(sender As Object, e As EventArgs) Handles BtnEliminar.Click
         If dgvInventario.SelectedCells.Count > 0 Then
@@ -111,4 +135,10 @@ Public Class Inventario
         txtCantidad.Text = selectedRow.Cells(3).Value.ToString
 
     End Sub
+    Private Sub Limpiar()
+        txtTipoPastel.Text = ""
+        txtCosto.Text = ""
+        txtCantidad.Text = ""
+    End Sub
+
 End Class

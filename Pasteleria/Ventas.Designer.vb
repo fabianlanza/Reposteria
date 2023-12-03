@@ -38,12 +38,15 @@ Partial Class Ventas
         Me.cmbNombreCliente = New System.Windows.Forms.ComboBox()
         Me.cmbIdEmpleado = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtIdDetalleVenta = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Panel1
         '
+        Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.dgvVentas)
         Me.Panel1.Controls.Add(Me.btnAgregar)
         Me.Panel1.Controls.Add(Me.BtnModificar)
@@ -202,11 +205,33 @@ Partial Class Ventas
         Me.Label5.TabIndex = 53
         Me.Label5.Text = "Empleado:"
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(437, 156)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(114, 18)
+        Me.Label6.TabIndex = 55
+        Me.Label6.Text = "ID Detalle venta:"
+        '
+        'txtIdDetalleVenta
+        '
+        Me.txtIdDetalleVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtIdDetalleVenta.Location = New System.Drawing.Point(557, 153)
+        Me.txtIdDetalleVenta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtIdDetalleVenta.Name = "txtIdDetalleVenta"
+        Me.txtIdDetalleVenta.Size = New System.Drawing.Size(153, 24)
+        Me.txtIdDetalleVenta.TabIndex = 56
+        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui
         Me.ClientSize = New System.Drawing.Size(833, 619)
+        Me.Controls.Add(Me.txtIdDetalleVenta)
+        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbIdEmpleado)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cmbNombreCliente)
@@ -245,4 +270,6 @@ Partial Class Ventas
     Friend WithEvents cmbNombreCliente As ComboBox
     Friend WithEvents cmbIdEmpleado As ComboBox
     Friend WithEvents Label5 As Label
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtIdDetalleVenta As TextBox
 End Class

@@ -101,11 +101,10 @@ Public Class Ventas
     End Sub
 
     Private Sub LoadVentasPastelData()
-        ' Load data from VentasPastel table with Cliente.Nombre, Pastel.IdPastel, and Pastel.TipoPastel into the DataGridView
         Using connection As New SqlConnection(connectionString)
             connection.Open()
 
-            Dim query As String = "SELECT VentaPastel.IdVenta, VentaPastel.IdCliente, Cliente.Nombre AS ClienteNombre, VentaPastel.IdEmpleado, VentaPastel.Fecha, VentaPastel.total, DetalleVenta.IdPastel, Pastel.Tipo AS TipoPastel FROM VentaPastel INNER JOIN Cliente ON VentaPastel.IdCliente = Cliente.IdCliente LEFT JOIN DetalleVenta ON VentaPastel.IdVenta = DetalleVenta.IdVenta LEFT JOIN Pastel ON DetalleVenta.IdPastel = Pastel.IdPastel"
+            Dim query As String = "SELECT VentaPastel.IdVenta, VentaPastel.IdCliente, Cliente.Nombre AS ClienteNombre, VentaPastel.IdEmpleado, VentaPastel.Fecha, VentaPastel.total, Pastel.IdPastel, Pastel.Tipo AS TipoPastel FROM VentaPastel INNER JOIN Cliente ON VentaPastel.IdCliente = Cliente.IdCliente LEFT JOIN DetalleVenta ON VentaPastel.IdDetalleVenta = DetalleVenta.IdDetalleVenta LEFT JOIN Pastel ON DetalleVenta.IdPastel = Pastel.IdPastel"
 
             Using cmd As New SqlCommand(query, connection)
                 Using adapter As New SqlDataAdapter(cmd)
