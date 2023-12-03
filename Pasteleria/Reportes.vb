@@ -7,6 +7,8 @@ Imports iText.IO.Image
 Imports iText.Layout.Properties
 
 Public Class Reportes
+    Dim formManager As New FormManager()
+
     Private Sub Reportes_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'LoadData(dgvHistorial, "Pastel")
     End Sub
@@ -130,4 +132,7 @@ Public Class Reportes
         Return data
     End Function
 
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        formManager.OpenForm(Inicio, Me)
+    End Sub
 End Class

@@ -24,6 +24,7 @@ Partial Class Reportes
     Private Sub InitializeComponent()
         Me.Button1 = New System.Windows.Forms.Button()
         Me.cmbReporte = New System.Windows.Forms.ComboBox()
+        Me.btnRegresar = New System.Windows.Forms.Button()
         Me.SuspendLayout()
         '
         'Button1
@@ -44,11 +45,21 @@ Partial Class Reportes
         Me.cmbReporte.Size = New System.Drawing.Size(121, 21)
         Me.cmbReporte.TabIndex = 2
         '
+        'btnRegresar
+        '
+        Me.btnRegresar.Location = New System.Drawing.Point(449, 423)
+        Me.btnRegresar.Name = "btnRegresar"
+        Me.btnRegresar.Size = New System.Drawing.Size(126, 38)
+        Me.btnRegresar.TabIndex = 3
+        Me.btnRegresar.Text = "Regresar"
+        Me.btnRegresar.UseVisualStyleBackColor = True
+        '
         'Reportes
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(625, 503)
+        Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.cmbReporte)
         Me.Controls.Add(Me.Button1)
         Me.Margin = New System.Windows.Forms.Padding(2)
@@ -59,4 +70,5 @@ Partial Class Reportes
     End Sub
     Friend WithEvents Button1 As Button
     Friend WithEvents cmbReporte As ComboBox
+    Friend WithEvents btnRegresar As Button
 End Class

@@ -4,7 +4,7 @@ Imports System.Data.SqlClient
 Public Class Ventas
 
     Dim detalleVenta As String = "DetalleVenta"
-
+    Dim formManager As New FormManager()
 
     Private Sub Ventas_Load(sender As Object, e As EventArgs) Handles MyBase.Load
 
@@ -25,9 +25,7 @@ Public Class Ventas
         'End Try
     End Sub
 
-
-
-
-
-
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        formManager.OpenForm(Inicio, Me)
+    End Sub
 End Class
