@@ -64,6 +64,7 @@ Partial Class Reportes
         Me.Controls.Add(Me.Button1)
         Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reportes"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"
         Me.ResumeLayout(False)
 

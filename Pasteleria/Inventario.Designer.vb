@@ -41,10 +41,10 @@ Partial Class Inventario
         'BtnModificar
         '
         Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.Location = New System.Drawing.Point(244, 303)
-        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnModificar.Location = New System.Drawing.Point(183, 246)
+        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(100, 47)
+        Me.BtnModificar.Size = New System.Drawing.Size(75, 38)
         Me.BtnModificar.TabIndex = 39
         Me.BtnModificar.Text = "Modificar"
         Me.BtnModificar.UseVisualStyleBackColor = True
@@ -52,10 +52,10 @@ Partial Class Inventario
         'BtnEliminar
         '
         Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(441, 303)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.BtnEliminar.Location = New System.Drawing.Point(331, 246)
+        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(100, 47)
+        Me.BtnEliminar.Size = New System.Drawing.Size(75, 38)
         Me.BtnEliminar.TabIndex = 38
         Me.BtnEliminar.Text = "Eliminar"
         Me.BtnEliminar.UseVisualStyleBackColor = True
@@ -63,20 +63,19 @@ Partial Class Inventario
         'dgvInventario
         '
         Me.dgvInventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvInventario.Location = New System.Drawing.Point(30, 25)
-        Me.dgvInventario.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvInventario.Location = New System.Drawing.Point(22, 20)
         Me.dgvInventario.Name = "dgvInventario"
         Me.dgvInventario.RowHeadersWidth = 51
-        Me.dgvInventario.Size = New System.Drawing.Size(708, 272)
+        Me.dgvInventario.Size = New System.Drawing.Size(531, 221)
         Me.dgvInventario.TabIndex = 37
         '
         'btnRegresar
         '
         Me.btnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnRegresar.Location = New System.Drawing.Point(635, 303)
-        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnRegresar.Location = New System.Drawing.Point(476, 246)
+        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(103, 47)
+        Me.btnRegresar.Size = New System.Drawing.Size(77, 38)
         Me.btnRegresar.TabIndex = 36
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
@@ -84,10 +83,10 @@ Partial Class Inventario
         'btnAgregar
         '
         Me.btnAgregar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.btnAgregar.Location = New System.Drawing.Point(30, 303)
-        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnAgregar.Location = New System.Drawing.Point(22, 246)
+        Me.btnAgregar.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.btnAgregar.Name = "btnAgregar"
-        Me.btnAgregar.Size = New System.Drawing.Size(100, 47)
+        Me.btnAgregar.Size = New System.Drawing.Size(75, 38)
         Me.btnAgregar.TabIndex = 35
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
@@ -95,28 +94,29 @@ Partial Class Inventario
         'txtTipoPastel
         '
         Me.txtTipoPastel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTipoPastel.Location = New System.Drawing.Point(187, 28)
-        Me.txtTipoPastel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTipoPastel.Location = New System.Drawing.Point(140, 23)
+        Me.txtTipoPastel.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtTipoPastel.Name = "txtTipoPastel"
-        Me.txtTipoPastel.Size = New System.Drawing.Size(183, 24)
+        Me.txtTipoPastel.Size = New System.Drawing.Size(138, 21)
         Me.txtTipoPastel.TabIndex = 33
         '
         'txtCosto
         '
         Me.txtCosto.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCosto.Location = New System.Drawing.Point(529, 25)
-        Me.txtCosto.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCosto.Location = New System.Drawing.Point(397, 20)
+        Me.txtCosto.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCosto.Name = "txtCosto"
-        Me.txtCosto.Size = New System.Drawing.Size(183, 24)
+        Me.txtCosto.Size = New System.Drawing.Size(138, 21)
         Me.txtCosto.TabIndex = 32
         '
         'Label3
         '
         Me.Label3.AutoSize = True
         Me.Label3.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label3.Location = New System.Drawing.Point(43, 87)
+        Me.Label3.Location = New System.Drawing.Point(32, 71)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(70, 18)
+        Me.Label3.Size = New System.Drawing.Size(59, 15)
         Me.Label3.TabIndex = 31
         Me.Label3.Text = "Cantidad:"
         '
@@ -124,9 +124,10 @@ Partial Class Inventario
         '
         Me.Label2.AutoSize = True
         Me.Label2.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label2.Location = New System.Drawing.Point(43, 34)
+        Me.Label2.Location = New System.Drawing.Point(32, 28)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(104, 18)
+        Me.Label2.Size = New System.Drawing.Size(87, 15)
         Me.Label2.TabIndex = 30
         Me.Label2.Text = "Tipo de pastel:"
         '
@@ -134,19 +135,20 @@ Partial Class Inventario
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(434, 32)
+        Me.Label1.Location = New System.Drawing.Point(326, 26)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(2, 0, 2, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(53, 18)
+        Me.Label1.Size = New System.Drawing.Size(41, 15)
         Me.Label1.TabIndex = 29
         Me.Label1.Text = "Costo:"
         '
         'txtCantidad
         '
         Me.txtCantidad.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtCantidad.Location = New System.Drawing.Point(187, 87)
-        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtCantidad.Location = New System.Drawing.Point(140, 71)
+        Me.txtCantidad.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.txtCantidad.Name = "txtCantidad"
-        Me.txtCantidad.Size = New System.Drawing.Size(183, 24)
+        Me.txtCantidad.Size = New System.Drawing.Size(138, 21)
         Me.txtCantidad.TabIndex = 40
         '
         'Panel1
@@ -156,16 +158,17 @@ Partial Class Inventario
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.btnRegresar)
         Me.Panel1.Controls.Add(Me.BtnEliminar)
-        Me.Panel1.Location = New System.Drawing.Point(25, 224)
+        Me.Panel1.Location = New System.Drawing.Point(19, 182)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(784, 369)
+        Me.Panel1.Size = New System.Drawing.Size(588, 300)
         Me.Panel1.TabIndex = 41
         '
         'Inventario
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(833, 619)
+        Me.ClientSize = New System.Drawing.Size(625, 503)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.txtTipoPastel)
@@ -173,7 +176,9 @@ Partial Class Inventario
         Me.Controls.Add(Me.Label3)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Inventario"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inventario"
         CType(Me.dgvInventario, System.ComponentModel.ISupportInitialize).EndInit()
         Me.Panel1.ResumeLayout(False)

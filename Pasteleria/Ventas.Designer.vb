@@ -178,6 +178,7 @@ Partial Class Ventas
         Me.Controls.Add(Me.Label1)
         Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
         Me.Name = "Ventas"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Ventas"
         Me.Panel1.ResumeLayout(False)
         CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).EndInit()
