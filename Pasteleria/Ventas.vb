@@ -14,7 +14,7 @@ Public Class Ventas
     End Sub
 
     Private Sub LoadTipoPastel()
-        cmbPastel.Items.Clear() ' Clear existing items before populating
+        cmbPastel.Items.Clear()
         Using connection As New SqlConnection(connectionString)
             connection.Open()
             Dim query As String = "SELECT DISTINCT Tipo FROM Pastel"
@@ -82,11 +82,10 @@ Public Class Ventas
                 End Using
 
                 MessageBox.Show("Data inserted into VentaPastel table.")
-                LoadVentasPastelData() ' Refresh the DataGridView after insertion
-                LoadClientes() ' Refresh the Cliente combo box
-                LoadEmpleados() ' Refresh the Empleado combo box
+                LoadVentasPastelData()
+                LoadClientes()
+                LoadEmpleados()
 
-                ' Clear input fields
                 txtCantidad.Clear()
                 txtTotal.Clear()
                 cmbPastel.SelectedIndex = -1
@@ -122,19 +121,17 @@ Public Class Ventas
 
 
     Private Sub UpdateTotal()
-        ' Calculate and update the 'Total' TextBox
         If Decimal.TryParse(txtCantidad.Text, Nothing) Then
             Dim cantidad As Decimal = Decimal.Parse(txtCantidad.Text)
             Dim tipoPastel As String = cmbPastel.Text
             Dim total As Decimal = GetTotalCost(tipoPastel, cantidad)
-            txtTotal.Text = total.ToString("C") ' Format as currency or adjust as needed
+            txtTotal.Text = total.ToString("C")
         Else
-            txtTotal.Text = String.Empty ' Clear the 'Total' TextBox if 'Cantidad' is not a valid decimal
+            txtTotal.Text = String.Empty
         End If
     End Sub
 
     Private Function GetTotalCost(tipoPastel As String, cantidad As Decimal) As Decimal
-        ' Calculate the total cost based on Pastel.Costo and DetalleVenta.Cantidad
         Using connection As New SqlConnection(connectionString)
             connection.Open()
             Dim query As String = "SELECT Costo FROM Pastel WHERE Tipo = @Tipo"

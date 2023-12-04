@@ -120,7 +120,7 @@ Public Class Reportes
                             ' Verifica la consulta y construye la cadena 'data' según los campos específicos
                             If query.Contains("Cliente") Then
                                 ' Si la consulta es para clientes, muestra los datos de Nombre y Email
-                                data &= "Nombre De Cliente: " & reader("Nombre").ToString() & ", Email: " & reader("Email").ToString() & vbCrLf
+                                data &= "Nombre: " & reader("Nombre").ToString() & ", Email: " & reader("Email").ToString() & vbCrLf
                             ElseIf query.Contains("Pastel") Then
                                 ' Si la consulta es para pasteles, muestra los datos de Tipo y Cantidad
                                 data &= "Tipo: " & reader("Tipo").ToString() & ", Cantidad: " & reader("Cantidad").ToString() & vbCrLf

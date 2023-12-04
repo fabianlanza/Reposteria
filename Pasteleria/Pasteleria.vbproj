@@ -229,6 +229,9 @@
     <EmbeddedResource Include="Conexiones.resx">
       <DependentUpon>Conexiones.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Encargos.resx">
+      <DependentUpon>Encargos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>

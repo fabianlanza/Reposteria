@@ -29,9 +29,10 @@ Partial Class Reportes
         '
         'Button1
         '
-        Me.Button1.Location = New System.Drawing.Point(242, 192)
+        Me.Button1.Location = New System.Drawing.Point(323, 236)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(120, 41)
+        Me.Button1.Size = New System.Drawing.Size(160, 50)
         Me.Button1.TabIndex = 1
         Me.Button1.Text = "Crear PDF"
         Me.Button1.UseVisualStyleBackColor = True
@@ -40,29 +41,33 @@ Partial Class Reportes
         '
         Me.cmbReporte.FormattingEnabled = True
         Me.cmbReporte.Items.AddRange(New Object() {"Mostrar Clientes", "Mostrar Pasteles", "Ventas Por Mes"})
-        Me.cmbReporte.Location = New System.Drawing.Point(242, 139)
+        Me.cmbReporte.Location = New System.Drawing.Point(323, 171)
+        Me.cmbReporte.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbReporte.Name = "cmbReporte"
-        Me.cmbReporte.Size = New System.Drawing.Size(121, 21)
+        Me.cmbReporte.Size = New System.Drawing.Size(160, 24)
         Me.cmbReporte.TabIndex = 2
         '
         'btnRegresar
         '
-        Me.btnRegresar.Location = New System.Drawing.Point(449, 423)
+        Me.btnRegresar.Location = New System.Drawing.Point(599, 521)
+        Me.btnRegresar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnRegresar.Name = "btnRegresar"
-        Me.btnRegresar.Size = New System.Drawing.Size(126, 38)
+        Me.btnRegresar.Size = New System.Drawing.Size(168, 47)
         Me.btnRegresar.TabIndex = 3
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
         '
         'Reportes
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(625, 503)
+        Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui_2
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
+        Me.ClientSize = New System.Drawing.Size(833, 619)
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.cmbReporte)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(2)
+        Me.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Name = "Reportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"
