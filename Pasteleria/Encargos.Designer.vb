@@ -22,12 +22,9 @@ Partial Class Encargos
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.cmbNombreCliente = New System.Windows.Forms.ComboBox()
-        Me.cmbPastel = New System.Windows.Forms.ComboBox()
-        Me.txtTotal = New System.Windows.Forms.TextBox()
-        Me.Label4 = New System.Windows.Forms.Label()
+        Me.cmbEmpleado = New System.Windows.Forms.ComboBox()
         Me.Panel1 = New System.Windows.Forms.Panel()
-        Me.dgvVentas = New System.Windows.Forms.DataGridView()
+        Me.dgvEncargos = New System.Windows.Forms.DataGridView()
         Me.btnAgregar = New System.Windows.Forms.Button()
         Me.BtnModificar = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
@@ -36,50 +33,23 @@ Partial Class Encargos
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtTipoPastel = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
-        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dgvEncargos, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'cmbNombreCliente
+        'cmbEmpleado
         '
-        Me.cmbNombreCliente.FormattingEnabled = True
-        Me.cmbNombreCliente.Location = New System.Drawing.Point(527, 29)
-        Me.cmbNombreCliente.Name = "cmbNombreCliente"
-        Me.cmbNombreCliente.Size = New System.Drawing.Size(183, 24)
-        Me.cmbNombreCliente.TabIndex = 65
-        '
-        'cmbPastel
-        '
-        Me.cmbPastel.FormattingEnabled = True
-        Me.cmbPastel.Location = New System.Drawing.Point(187, 30)
-        Me.cmbPastel.Name = "cmbPastel"
-        Me.cmbPastel.Size = New System.Drawing.Size(183, 24)
-        Me.cmbPastel.TabIndex = 64
-        '
-        'txtTotal
-        '
-        Me.txtTotal.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtTotal.Location = New System.Drawing.Point(187, 146)
-        Me.txtTotal.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtTotal.Name = "txtTotal"
-        Me.txtTotal.ReadOnly = True
-        Me.txtTotal.Size = New System.Drawing.Size(183, 24)
-        Me.txtTotal.TabIndex = 63
-        '
-        'Label4
-        '
-        Me.Label4.AutoSize = True
-        Me.Label4.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label4.Location = New System.Drawing.Point(43, 146)
-        Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(45, 18)
-        Me.Label4.TabIndex = 62
-        Me.Label4.Text = "Total:"
+        Me.cmbEmpleado.FormattingEnabled = True
+        Me.cmbEmpleado.Location = New System.Drawing.Point(527, 29)
+        Me.cmbEmpleado.Name = "cmbEmpleado"
+        Me.cmbEmpleado.Size = New System.Drawing.Size(183, 24)
+        Me.cmbEmpleado.TabIndex = 65
         '
         'Panel1
         '
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
-        Me.Panel1.Controls.Add(Me.dgvVentas)
+        Me.Panel1.Controls.Add(Me.dgvEncargos)
         Me.Panel1.Controls.Add(Me.btnAgregar)
         Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.btnRegresar)
@@ -90,15 +60,15 @@ Partial Class Encargos
         Me.Panel1.Size = New System.Drawing.Size(784, 369)
         Me.Panel1.TabIndex = 61
         '
-        'dgvVentas
+        'dgvEncargos
         '
-        Me.dgvVentas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.dgvVentas.Location = New System.Drawing.Point(29, 25)
-        Me.dgvVentas.Margin = New System.Windows.Forms.Padding(4)
-        Me.dgvVentas.Name = "dgvVentas"
-        Me.dgvVentas.RowHeadersWidth = 51
-        Me.dgvVentas.Size = New System.Drawing.Size(708, 272)
-        Me.dgvVentas.TabIndex = 37
+        Me.dgvEncargos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
+        Me.dgvEncargos.Location = New System.Drawing.Point(29, 25)
+        Me.dgvEncargos.Margin = New System.Windows.Forms.Padding(4)
+        Me.dgvEncargos.Name = "dgvEncargos"
+        Me.dgvEncargos.RowHeadersWidth = 51
+        Me.dgvEncargos.Size = New System.Drawing.Size(708, 272)
+        Me.dgvEncargos.TabIndex = 37
         '
         'btnAgregar
         '
@@ -179,20 +149,28 @@ Partial Class Encargos
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(437, 36)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(57, 18)
+        Me.Label1.Size = New System.Drawing.Size(75, 18)
         Me.Label1.TabIndex = 57
-        Me.Label1.Text = "Cliente:"
+        Me.Label1.Text = "Empleado"
+        '
+        'txtTipoPastel
+        '
+        Me.txtTipoPastel.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.txtTipoPastel.Location = New System.Drawing.Point(185, 24)
+        Me.txtTipoPastel.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.txtTipoPastel.Name = "txtTipoPastel"
+        Me.txtTipoPastel.Size = New System.Drawing.Size(183, 24)
+        Me.txtTipoPastel.TabIndex = 66
         '
         'Encargos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui_2
+        Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(833, 619)
-        Me.Controls.Add(Me.cmbNombreCliente)
-        Me.Controls.Add(Me.cmbPastel)
-        Me.Controls.Add(Me.txtTotal)
-        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtTipoPastel)
+        Me.Controls.Add(Me.cmbEmpleado)
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.txtCantidad)
         Me.Controls.Add(Me.Label3)
@@ -201,17 +179,14 @@ Partial Class Encargos
         Me.Name = "Encargos"
         Me.Text = "Encargos"
         Me.Panel1.ResumeLayout(False)
-        CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dgvEncargos, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
     End Sub
-    Friend WithEvents cmbNombreCliente As ComboBox
-    Friend WithEvents cmbPastel As ComboBox
-    Friend WithEvents txtTotal As TextBox
-    Friend WithEvents Label4 As Label
+    Friend WithEvents cmbEmpleado As ComboBox
     Friend WithEvents Panel1 As Panel
-    Friend WithEvents dgvVentas As DataGridView
+    Friend WithEvents dgvEncargos As DataGridView
     Friend WithEvents btnAgregar As Button
     Friend WithEvents BtnModificar As Button
     Friend WithEvents btnRegresar As Button
@@ -220,4 +195,5 @@ Partial Class Encargos
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
     Friend WithEvents Label1 As Label
+    Friend WithEvents txtTipoPastel As TextBox
 End Class

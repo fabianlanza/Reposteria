@@ -2,20 +2,6 @@
 
     Dim formManager As FormManager = New FormManager
 
-    'Private Sub btnInicioSesion_Click(sender As Object, e As EventArgs)
-    'formManager.OpenForm(NuevoEmpleado, Me)
-    'NuevoEmpleado.Show()
-    'Me.Hide()
-
-    'End Sub
-
-    'Private Sub btnRegistrar_Click(sender As Object, e As EventArgs)
-    ' formManager.OpenForm(NuevoUsuario, Me)
-    ' NuevoUsuario.Show()
-    'Me.Hide()
-    ' End Sub
-
-
     Private Sub btnCliente_Click(sender As Object, e As EventArgs) Handles btnCliente.Click
         formManager.OpenForm(Clientes, Me)
     End Sub
@@ -36,4 +22,9 @@
     Private Sub btnVentas_Click(sender As Object, e As EventArgs) Handles btnVentas.Click
         formManager.OpenForm(Ventas, Me)
     End Sub
+
+    Private Sub btnEncargos_Click(sender As Object, e As EventArgs) Handles btnEncargos.Click
+        formManager.OpenForm(Encargos, Me)
+    End Sub
+
 End Class

@@ -28,6 +28,7 @@ Partial Class Inicio
         Me.btnCliente = New System.Windows.Forms.Button()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
         Me.btnVentas = New System.Windows.Forms.Button()
+        Me.btnEncargos = New System.Windows.Forms.Button()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
@@ -77,6 +78,7 @@ Partial Class Inicio
         '
         'PictureBox1
         '
+        Me.PictureBox1.BackColor = System.Drawing.Color.Transparent
         Me.PictureBox1.Image = Global.Pasteleria.My.Resources.Resources.LogoPng
         Me.PictureBox1.Location = New System.Drawing.Point(256, 13)
         Me.PictureBox1.Margin = New System.Windows.Forms.Padding(4)
@@ -97,6 +99,17 @@ Partial Class Inicio
         Me.btnVentas.Text = "Ventas"
         Me.btnVentas.UseVisualStyleBackColor = True
         '
+        'btnEncargos
+        '
+        Me.btnEncargos.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.btnEncargos.Location = New System.Drawing.Point(152, 488)
+        Me.btnEncargos.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
+        Me.btnEncargos.Name = "btnEncargos"
+        Me.btnEncargos.Size = New System.Drawing.Size(205, 62)
+        Me.btnEncargos.TabIndex = 14
+        Me.btnEncargos.Text = "Encargos"
+        Me.btnEncargos.UseVisualStyleBackColor = True
+        '
         'Inicio
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
@@ -104,6 +117,7 @@ Partial Class Inicio
         Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui
         Me.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.ClientSize = New System.Drawing.Size(876, 578)
+        Me.Controls.Add(Me.btnEncargos)
         Me.Controls.Add(Me.btnVentas)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.btnCliente)
@@ -124,4 +138,5 @@ Partial Class Inicio
     Friend WithEvents btnCliente As Button
     Friend WithEvents PictureBox1 As PictureBox
     Friend WithEvents btnVentas As Button
+    Friend WithEvents btnEncargos As Button
 End Class

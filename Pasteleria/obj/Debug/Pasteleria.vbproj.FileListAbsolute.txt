@@ -166,3 +166,4 @@ C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Reporte
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.vbproj.CopyComplete
 C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Ventas.resources
 E:\Github\Reposteria\Pasteleria\obj\Debug\Pasteleria.Ventas.resources
+C:\Users\fall3\Desktop\GitHub\Reposteria\Pasteleria\obj\Debug\Pasteleria.Encargos.resources
