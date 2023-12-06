@@ -7,14 +7,18 @@ Public Class Encargos
 
 
     Private Sub Encargos_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        LoadPastelEncargo()
-        LoadEmpleados()
+        Try
+            LoadPastelEncargo()
+            LoadEmpleados()
+        Catch ex As Exception
+            MessageBox.Show($"Error al cargar datos: {ex.Message}")
+        End Try
+
     End Sub
 
     Private Sub btnAgregar_Click(sender As Object, e As EventArgs) Handles btnAgregar.Click
         Try
             If cmbEmpleado.SelectedItem IsNot Nothing AndAlso Not String.IsNullOrEmpty(txtTipoPastel.Text) AndAlso Integer.TryParse(txtCantidad.Text, Nothing) Then
-
                 Dim empleadoItem As KeyValuePair(Of Integer, String) = DirectCast(cmbEmpleado.SelectedItem, KeyValuePair(Of Integer, String))
                 Dim idEmpleado As Integer = empleadoItem.Key
                 Dim tipo As String = txtTipoPastel.Text
@@ -23,6 +27,7 @@ Public Class Encargos
                 Using connection As New SqlConnection(connect)
                     connection.Open()
 
+                    ' INSERT INTO PastelEncargo
                     Dim insertPastelEncargoQuery As String = "INSERT INTO PastelEncargo (IdEmpleado, Tipo, Cantidad) VALUES (@IdEmpleado, @Tipo, @Cantidad)"
 
                     Using cmd As New SqlCommand(insertPastelEncargoQuery, connection)
@@ -31,44 +36,20 @@ Public Class Encargos
                         cmd.Parameters.AddWithValue("@Cantidad", cantidad)
                         cmd.ExecuteNonQuery()
                     End Using
+
+                    MessageBox.Show("Datos agregados!")
+                    LoadPastelEncargo()
                 End Using
-
-
-                Dim idPastelEncargo As Integer
-                Using connection As New SqlConnection(connect)
-                    connection.Open()
-
-                    Dim selectIdQuery As String = "SELECT SCOPE_IDENTITY()"
-
-                    Using cmd As New SqlCommand(selectIdQuery, connection)
-                        idPastelEncargo = Convert.ToInt32(cmd.ExecuteScalar())
-                    End Using
-                End Using
-
-
-                ' Insert into DetalleEncargo
-                Using connection As New SqlConnection(connect)
-                    connection.Open()
-
-                    Dim insertDetalleEncargoQuery As String = "INSERT INTO DetalleEncargo (IdPastelEncargo, Cantidad) VALUES (@IdPastelEncargo, @Cantidad)"
-
-                    Using cmd As New SqlCommand(insertDetalleEncargoQuery, connection)
-                        cmd.Parameters.AddWithValue("@IdPastelEncargo", idPastelEncargo)
-                        cmd.Parameters.AddWithValue("@Cantidad", cantidad)
-
-                        cmd.ExecuteNonQuery()
-                    End Using
-                End Using
-
-                MessageBox.Show("Datos agregados en PastelEncargo & DetalleEncargo.")
-                LoadPastelEncargo()
             Else
-                MessageBox.Show("Error: Los espacios estan vacios")
+                MessageBox.Show("Error: Los espacios no pueden estar vacíos.")
             End If
+        Catch ex As SqlException
+            MessageBox.Show($"Error: {ex.Message}")
         Catch ex As Exception
-            MessageBox.Show($"An error occurred: {ex.Message}")
+            MessageBox.Show($"Error: {ex.Message}")
         End Try
     End Sub
+
 
 
 
@@ -93,7 +74,7 @@ Public Class Encargos
         Using connection As New SqlConnection(connect)
             connection.Open()
 
-            Dim query As String = "SELECT PastelEncargo.IdPastelEncargo, PastelEncargo.IdEmpleado, PastelEncargo.Tipo AS Pastel, PastelEncargo.Cantidad FROM PastelEncargo INNER JOIN Empleado ON PastelEncargo.IdEmpleado = Empleado.IdEmpleado"
+            Dim query As String = "SELECT PastelEncargo.IdPastelEncargo, PastelEncargo.IdEmpleado, PastelEncargo.Tipo AS PastelTipo, PastelEncargo.Cantidad FROM PastelEncargo INNER JOIN Empleado ON PastelEncargo.IdEmpleado = Empleado.IdEmpleado"
 
             Using cmd As New SqlCommand(query, connection)
                 Using adapter As New SqlDataAdapter(cmd)
@@ -104,5 +85,6 @@ Public Class Encargos
             End Using
         End Using
     End Sub
+
 
 End Class

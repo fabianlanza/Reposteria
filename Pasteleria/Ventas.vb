@@ -81,7 +81,7 @@ Public Class Ventas
                     End Using
                 End Using
 
-                MessageBox.Show("Data inserted into VentaPastel table.")
+                MessageBox.Show("Datos agregados!")
                 LoadVentasPastelData()
                 LoadClientes()
                 LoadEmpleados()
@@ -92,11 +92,21 @@ Public Class Ventas
                 cmbNombreCliente.SelectedIndex = -1
                 cmbIdEmpleado.SelectedIndex = -1
             Else
-                MessageBox.Show("Please enter a valid quantity.")
+                MessageBox.Show("Ingrese una cantidad valida.")
             End If
         Catch ex As Exception
-            MessageBox.Show($"An error occurred: {ex.Message}")
+            MessageBox.Show($"Error: {ex.Message}")
         End Try
+    End Sub
+
+
+
+    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
+        UpdateTotal()
+    End Sub
+
+    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
+        formManager.OpenForm(Inicio, Me)
     End Sub
 
     Private Sub LoadVentasPastelData()
@@ -114,11 +124,6 @@ Public Class Ventas
             End Using
         End Using
     End Sub
-
-    Private Sub txtCantidad_TextChanged(sender As Object, e As EventArgs) Handles txtCantidad.TextChanged
-        UpdateTotal()
-    End Sub
-
 
     Private Sub UpdateTotal()
         If Decimal.TryParse(txtCantidad.Text, Nothing) Then
@@ -143,7 +148,5 @@ Public Class Ventas
         End Using
     End Function
 
-    Private Sub btnRegresar_Click(sender As Object, e As EventArgs) Handles btnRegresar.Click
-        FormManager.OpenForm(Inicio, Me)
-    End Sub
+
 End Class
