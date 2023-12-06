@@ -33,6 +33,9 @@ Public Class Reportes
         ElseIf cmbReporte.SelectedItem.ToString() = "Ventas Por Año" Then
             sentencia = "SELECT YEAR(VP.Fecha) AS Año, SUM(DV.Cantidad) AS CantidadPastelesVendidos FROM VentaPastel VP JOIN DetalleVenta DV ON VP.IdVenta = DV.IdDetalleVenta JOIN Pastel P ON DV.IdPastel = P.IdPastel GROUP BY YEAR(VP.Fecha) ORDER BY Año;"
             Header = "Ventas por Año"
+        ElseIf cmbReporte.SelectedItem.ToString() = "Comprados Por Cliente" Then
+            sentencia = "SELECT C.IdCliente, C.Nombre AS NombreCliente, COUNT(VP.IdVenta) AS TotalVentas, SUM(VP.total) AS IngresosTotales FROM Cliente C LEFT JOIN VentaPastel VP ON C.IdCliente = VP.IdCliente GROUP BY C.IdCliente, C.Nombre ORDER BY IngresosTotales DESC;"
+            Header = "Comprados Por Cliente"
         End If
 
 
@@ -141,8 +144,6 @@ Public Class Reportes
                                 data &= "Tipo: " & reader("Tipo").ToString() & ", Cantidad: " & reader("Cantidad").ToString() & vbCrLf
                             ElseIf query.Contains("Ventas Por Mes") Then
                                 data &= "Mes: " & reader("Mes").ToString() & ", Cantidad de Pasteles Vendidos: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
-                                'ElseIf query.Contains("Año") Then
-                                'data &= "Año: " & reader("Año").ToString() & ", Cantidad Vendida: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
                             End If
                         End While
                     End Using

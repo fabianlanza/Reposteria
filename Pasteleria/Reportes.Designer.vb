@@ -39,7 +39,7 @@ Partial Class Reportes
         'cmbReporte
         '
         Me.cmbReporte.FormattingEnabled = True
-        Me.cmbReporte.Items.AddRange(New Object() {"Mostrar Clientes", "Mostrar Pasteles", "Ventas Por Mes", "Ventas Por Año"})
+        Me.cmbReporte.Items.AddRange(New Object() {"Mostrar Clientes", "Mostrar Pasteles", "Ventas Por Mes", "Ventas Por Año", "Comprados Por Cliente"})
         Me.cmbReporte.Location = New System.Drawing.Point(242, 139)
         Me.cmbReporte.Name = "cmbReporte"
         Me.cmbReporte.Size = New System.Drawing.Size(121, 21)
@@ -64,7 +64,7 @@ Partial Class Reportes
         Me.Controls.Add(Me.btnRegresar)
         Me.Controls.Add(Me.cmbReporte)
         Me.Controls.Add(Me.Button1)
-        Me.Margin = New System.Windows.Forms.Padding(2, 2, 2, 2)
+        Me.Margin = New System.Windows.Forms.Padding(2)
         Me.Name = "Reportes"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Reportes"
