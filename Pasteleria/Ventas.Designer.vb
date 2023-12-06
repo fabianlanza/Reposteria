@@ -25,9 +25,7 @@ Partial Class Ventas
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.dgvVentas = New System.Windows.Forms.DataGridView()
         Me.btnAgregar = New System.Windows.Forms.Button()
-        Me.BtnModificar = New System.Windows.Forms.Button()
         Me.btnRegresar = New System.Windows.Forms.Button()
-        Me.BtnEliminar = New System.Windows.Forms.Button()
         Me.txtCantidad = New System.Windows.Forms.TextBox()
         Me.Label3 = New System.Windows.Forms.Label()
         Me.Label2 = New System.Windows.Forms.Label()
@@ -38,8 +36,6 @@ Partial Class Ventas
         Me.cmbNombreCliente = New System.Windows.Forms.ComboBox()
         Me.cmbIdEmpleado = New System.Windows.Forms.ComboBox()
         Me.Label5 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
-        Me.txtIdDetalleVenta = New System.Windows.Forms.TextBox()
         Me.Panel1.SuspendLayout()
         CType(Me.dgvVentas, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,9 +45,7 @@ Partial Class Ventas
         Me.Panel1.BackColor = System.Drawing.Color.Transparent
         Me.Panel1.Controls.Add(Me.dgvVentas)
         Me.Panel1.Controls.Add(Me.btnAgregar)
-        Me.Panel1.Controls.Add(Me.BtnModificar)
         Me.Panel1.Controls.Add(Me.btnRegresar)
-        Me.Panel1.Controls.Add(Me.BtnEliminar)
         Me.Panel1.Location = New System.Drawing.Point(24, 224)
         Me.Panel1.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
         Me.Panel1.Name = "Panel1"
@@ -79,17 +73,6 @@ Partial Class Ventas
         Me.btnAgregar.Text = "Agregar"
         Me.btnAgregar.UseVisualStyleBackColor = True
         '
-        'BtnModificar
-        '
-        Me.BtnModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnModificar.Location = New System.Drawing.Point(244, 303)
-        Me.BtnModificar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnModificar.Name = "BtnModificar"
-        Me.BtnModificar.Size = New System.Drawing.Size(100, 47)
-        Me.BtnModificar.TabIndex = 39
-        Me.BtnModificar.Text = "Modificar"
-        Me.BtnModificar.UseVisualStyleBackColor = True
-        '
         'btnRegresar
         '
         Me.btnRegresar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
@@ -100,17 +83,6 @@ Partial Class Ventas
         Me.btnRegresar.TabIndex = 36
         Me.btnRegresar.Text = "Regresar"
         Me.btnRegresar.UseVisualStyleBackColor = True
-        '
-        'BtnEliminar
-        '
-        Me.BtnEliminar.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.BtnEliminar.Location = New System.Drawing.Point(441, 303)
-        Me.BtnEliminar.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.BtnEliminar.Name = "BtnEliminar"
-        Me.BtnEliminar.Size = New System.Drawing.Size(100, 47)
-        Me.BtnEliminar.TabIndex = 38
-        Me.BtnEliminar.Text = "Eliminar"
-        Me.BtnEliminar.UseVisualStyleBackColor = True
         '
         'txtCantidad
         '
@@ -205,33 +177,12 @@ Partial Class Ventas
         Me.Label5.TabIndex = 53
         Me.Label5.Text = "Empleado:"
         '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(437, 156)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(114, 18)
-        Me.Label6.TabIndex = 55
-        Me.Label6.Text = "ID Detalle venta:"
-        '
-        'txtIdDetalleVenta
-        '
-        Me.txtIdDetalleVenta.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtIdDetalleVenta.Location = New System.Drawing.Point(557, 153)
-        Me.txtIdDetalleVenta.Margin = New System.Windows.Forms.Padding(3, 2, 3, 2)
-        Me.txtIdDetalleVenta.Name = "txtIdDetalleVenta"
-        Me.txtIdDetalleVenta.Size = New System.Drawing.Size(153, 24)
-        Me.txtIdDetalleVenta.TabIndex = 56
-        '
         'Ventas
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackgroundImage = Global.Pasteleria.My.Resources.Resources.Ui
         Me.ClientSize = New System.Drawing.Size(833, 619)
-        Me.Controls.Add(Me.txtIdDetalleVenta)
-        Me.Controls.Add(Me.Label6)
         Me.Controls.Add(Me.cmbIdEmpleado)
         Me.Controls.Add(Me.Label5)
         Me.Controls.Add(Me.cmbNombreCliente)
@@ -257,9 +208,7 @@ Partial Class Ventas
     Friend WithEvents Panel1 As Panel
     Friend WithEvents dgvVentas As DataGridView
     Friend WithEvents btnAgregar As Button
-    Friend WithEvents BtnModificar As Button
     Friend WithEvents btnRegresar As Button
-    Friend WithEvents BtnEliminar As Button
     Friend WithEvents txtCantidad As TextBox
     Friend WithEvents Label3 As Label
     Friend WithEvents Label2 As Label
@@ -270,6 +219,4 @@ Partial Class Ventas
     Friend WithEvents cmbNombreCliente As ComboBox
     Friend WithEvents cmbIdEmpleado As ComboBox
     Friend WithEvents Label5 As Label
-    Friend WithEvents Label6 As Label
-    Friend WithEvents txtIdDetalleVenta As TextBox
 End Class
