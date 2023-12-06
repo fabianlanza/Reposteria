@@ -121,6 +121,18 @@ Public Class Reportes
                         ' Lee los datos y almacenarlos en la cadena 'data'
                         While reader.Read()
                             ' Verifica la consulta y construye la cadena 'data' según los campos específicos
+                            If query.Contains("Año") Then
+                                Try
+                                    Dim año As Integer = Convert.ToInt32(reader("Año"))
+                                    Dim cantidad As Integer = Convert.ToInt32(reader("CantidadPastelesVendidos"))
+                                    data &= "Año: " & año.ToString() & ", Cantidad Vendida: " & cantidad.ToString() & vbCrLf
+                                Catch ex As InvalidCastException
+
+                                    Continue While
+                                End Try
+                            End If
+
+                            ' Verifica la consulta y construye la cadena 'data' según los campos específicos
                             If query.Contains("Cliente") Then
                                 ' Si la consulta es para clientes, muestra los datos de Nombre y Email
                                 data &= "Nombre: " & reader("Nombre").ToString() & ", Email: " & reader("Email").ToString() & vbCrLf
@@ -129,8 +141,8 @@ Public Class Reportes
                                 data &= "Tipo: " & reader("Tipo").ToString() & ", Cantidad: " & reader("Cantidad").ToString() & vbCrLf
                             ElseIf query.Contains("Ventas Por Mes") Then
                                 data &= "Mes: " & reader("Mes").ToString() & ", Cantidad de Pasteles Vendidos: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
-                            ElseIf query.Contains("Año") Then
-                                data &= "Año: " & reader("Año").ToString() & ", Cantidad Vendida: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
+                                'ElseIf query.Contains("Año") Then
+                                'data &= "Año: " & reader("Año").ToString() & ", Cantidad Vendida: " & reader("CantidadPastelesVendidos").ToString() & vbCrLf
                             End If
                         End While
                     End Using
