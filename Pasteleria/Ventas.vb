@@ -3,7 +3,8 @@
 Public Class Ventas
 
     Dim formManager As New FormManager
-
+    'LAPTOP-S8ASBQKS
+    'DESKTOP-AND27IO\SQL
     Dim connectionString As String = "Data Source=LAPTOP-S8ASBQKS;Initial Catalog=SistemaPasteleria;Integrated Security=True"
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
